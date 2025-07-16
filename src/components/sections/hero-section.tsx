@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Download, MessageCircle, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Download, MessageCircle, Twitter, Instagram, Linkedin } from "lucide-react";
 import { StickyNoteIcon } from "@/components/icons/sticky-note";
 
 export function HeroSection() {
@@ -16,8 +16,8 @@ export function HeroSection() {
             className="rounded-2xl shadow-lg"
             data-ai-hint="man avatar"
           />
-          <h2 className="font-headline text-4xl md:text-5xl font-bold text-foreground">
-            Ayaz
+          <h2 className="font-headline text-5xl md:text-7xl font-bold text-foreground">
+            Hello! I&apos;m Ayaz
           </h2>
         </div>
         
