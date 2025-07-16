@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { MessageCircle, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Download, MessageCircle, Twitter, Instagram, Linkedin } from "lucide-react";
 import { StickyNoteIcon } from "@/components/icons/sticky-note";
 
 export function HeroSection() {
@@ -32,11 +32,12 @@ export function HeroSection() {
 
         <div className="mt-12 flex flex-col md:flex-row md:flex-wrap items-start md:items-center gap-4">
           <div className="flex items-center gap-4">
-            <Button size="lg" className="px-8 bg-gradient-to-r from-primary to-orange-400 text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/40 transition-all duration-300 hover:-translate-y-1">
+            <Button size="lg" className="px-8">
               <MessageCircle className="mr-2 h-5 w-5" />
               Talk With Me
             </Button>
-            <Button size="lg" variant="outline" className="px-8 bg-card hover:bg-accent/50 shadow-md transition-all duration-300 hover:-translate-y-1">
+            <Button size="lg" variant="outline" className="px-8">
+              <Download className="mr-2 h-5 w-5" />
               Download my CV
             </Button>
           </div>
