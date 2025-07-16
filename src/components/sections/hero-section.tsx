@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Download, MessageCircle, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Download, MessageCircle, Twitter, Linkedin, Dribbble } from "lucide-react";
 import { StickyNoteIcon } from "@/components/icons/sticky-note";
 
 export function HeroSection() {
@@ -30,7 +30,7 @@ export function HeroSection() {
           <span className="text-muted-foreground/50">Clarity, Empathy, And Precision.</span>
         </h1>
 
-        <div className="mt-12 flex flex-col md:flex-row md:flex-wrap items-start md:items-center gap-4">
+        <div className="mt-12 flex flex-col md:flex-row items-start md:items-center justify-between">
           <div className="flex items-center gap-4">
             <Button size="lg" className="px-8">
               <MessageCircle className="mr-2 h-5 w-5" />
@@ -41,15 +41,15 @@ export function HeroSection() {
               Download my CV
             </Button>
           </div>
-          <div className="flex items-center gap-2 md:pl-4">
-             <Button variant="ghost" size="icon" className="rounded-full hover:bg-accent">
-                <Twitter className="h-5 w-5 text-muted-foreground" />
+          <div className="flex items-center gap-3 mt-8 md:mt-0">
+             <Button variant="outline" size="icon" className="rounded-lg bg-card shadow-sm hover:shadow-md transition-shadow">
+                <Linkedin className="h-6 w-6 text-foreground fill-foreground" />
              </Button>
-             <Button variant="ghost" size="icon" className="rounded-full hover:bg-accent">
-                <Instagram className="h-5 w-5 text-muted-foreground" />
+             <Button variant="outline" size="icon" className="rounded-lg bg-card shadow-sm hover:shadow-md transition-shadow">
+                <Dribbble className="h-6 w-6 text-foreground" />
              </Button>
-             <Button variant="ghost" size="icon" className="rounded-full hover:bg-accent">
-                <Linkedin className="h-5 w-5 text-muted-foreground" />
+             <Button variant="outline" size="icon" className="rounded-lg bg-card shadow-sm hover:shadow-md transition-shadow">
+                <Twitter className="h-5 w-5 text-foreground fill-foreground" />
              </Button>
           </div>
         </div>
