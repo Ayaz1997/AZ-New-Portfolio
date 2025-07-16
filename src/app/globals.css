@@ -3,29 +3,48 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
+  :root, .theme-orange {
     --background: 0 0% 98%;
     --foreground: 20 14.3% 4.1%;
     --card: 0 0% 100%;
     --card-foreground: 20 14.3% 4.1%;
     --popover: 0 0% 100%;
     --popover-foreground: 20 14.3% 4.1%;
-    --primary: 25 95% 53%;
-    --primary-shadow: 25 95% 43%;
+    --primary: 27 87% 67%;
+    --primary-shadow: 27 87% 57%;
     --primary-foreground: 0 0% 98%;
     --secondary: 60 4.8% 95.9%;
     --secondary-foreground: 24 9.8% 10%;
     --muted: 60 4.8% 95.9%;
-    --muted-foreground: 0 0% 51%;
+    --muted-foreground: 24 5.4% 63.9%;
     --accent: 60 4.8% 95.9%;
     --accent-foreground: 24 9.8% 10%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 60 9.1% 97.8%;
     --border: 20 5.9% 90%;
     --input: 20 5.9% 90%;
-    --ring: 25 95% 53%;
+    --ring: 27 87% 67%;
     --radius: 0.5rem;
   }
+
+  .theme-violet {
+    --primary: 259 63% 60%;
+    --primary-shadow: 259 63% 50%;
+    --ring: 259 63% 60%;
+  }
+
+  .theme-indigo {
+    --primary: 238 82% 62%;
+    --primary-shadow: 238 82% 52%;
+    --ring: 238 82% 62%;
+  }
+
+  .theme-rose {
+    --primary: 343 80% 50%;
+    --primary-shadow: 343 80% 40%;
+    --ring: 343 80% 50%;
+  }
+
   .dark {
     --background: 20 14.3% 4.1%;
     --foreground: 60 9.1% 97.8%;
@@ -33,8 +52,8 @@
     --card-foreground: 60 9.1% 97.8%;
     --popover: 20 14.3% 4.1%;
     --popover-foreground: 60 9.1% 97.8%;
-    --primary: 25 95% 53%;
-    --primary-shadow: 25 95% 43%;
+    --primary: 27 87% 67%;
+    --primary-shadow: 27 87% 57%;
     --primary-foreground: 24 9.8% 10%;
     --secondary: 12 6.5% 15.1%;
     --secondary-foreground: 60 9.1% 97.8%;
@@ -46,7 +65,25 @@
     --destructive-foreground: 60 9.1% 97.8%;
     --border: 12 6.5% 15.1%;
     --input: 12 6.5% 15.1%;
-    --ring: 25 95% 53%;
+    --ring: 27 87% 67%;
+  }
+
+  .dark.theme-violet {
+    --primary: 259 63% 60%;
+    --primary-shadow: 259 63% 50%;
+    --ring: 259 63% 60%;
+  }
+
+  .dark.theme-indigo {
+    --primary: 238 82% 62%;
+    --primary-shadow: 238 82% 52%;
+    --ring: 238 82% 62%;
+  }
+
+  .dark.theme-rose {
+    --primary: 343 80% 50%;
+    --primary-shadow: 343 80% 40%;
+    --ring: 343 80% 50%;
   }
 }
 

@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { DoodleCircle } from '@/components/icons/doodle-circle';
 import { Menu, MessageCircle } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { ThemeToggle } from '@/components/theme-toggle';
 
 export function Header() {
   const navItems = [
@@ -33,10 +34,13 @@ export function Header() {
             </Link>
           ))}
         </nav>
-        <Button size="lg" className="hidden md:flex px-6 font-semibold">
-          <MessageCircle className="mr-2 h-5 w-5" />
-          Discuss Project
-        </Button>
+        <div className="hidden md:flex items-center gap-4">
+          <ThemeToggle />
+          <Button size="lg" className="px-6 font-semibold">
+            <MessageCircle className="mr-2 h-5 w-5" />
+            Discuss Project
+          </Button>
+        </div>
         <div className="md:hidden">
           <Sheet>
             <SheetTrigger asChild>
@@ -58,6 +62,9 @@ export function Header() {
                     <span className="relative z-10">{item.name}</span>
                   </Link>
                 ))}
+                <div className="mt-8">
+                  <ThemeToggle />
+                </div>
               </nav>
             </SheetContent>
           </Sheet>
