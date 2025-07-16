@@ -11,19 +11,19 @@ interface ThemeProviderState {
 }
 
 const initialState: ThemeProviderState = {
-  theme: 'orange',
+  theme: 'violet',
   setTheme: () => null,
   cycleTheme: () => null,
 };
 
 const ThemeProviderContext = React.createContext<ThemeProviderState>(initialState);
 
-const themes: Theme[] = ['orange', 'violet', 'indigo', 'rose', 'dark'];
+const themes: Theme[] = ['violet', 'orange', 'indigo', 'rose', 'dark'];
 const colorThemes: string[] = ['theme-orange', 'theme-violet', 'theme-indigo', 'theme-rose'];
 
 export function ThemeProvider({
   children,
-  defaultTheme = 'orange',
+  defaultTheme = 'violet',
   storageKey = 'ayaz-portfolio-theme',
 }: {
   children: React.ReactNode;
