@@ -15,7 +15,7 @@ export function Header() {
 
   return (
     <header className="py-6">
-      <div className="container mx-auto flex items-center justify-between">
+      <div className="container mx-auto flex items-center justify-between px-8 md:px-16">
         <Link href="/" className="font-headline text-3xl font-bold text-foreground">
           Ayaz.
         </Link>

@@ -1,11 +1,11 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Download, MessageCircle, Twitter, Linkedin, Dribbble } from "lucide-react";
+import { Download, MessageCircle, Linkedin, Dribbble, X } from "lucide-react";
 import { StickyNoteIcon } from "@/components/icons/sticky-note";
 
 export function HeroSection() {
   return (
-    <section className="container mx-auto py-10 md:py-24">
+    <section className="container mx-auto py-10 md:py-24 px-8 md:px-16">
       <div className="max-w-4xl">
         <div className="flex items-center gap-4">
           <Image
@@ -43,13 +43,13 @@ export function HeroSection() {
           </div>
           <div className="flex items-center gap-3 mt-8 md:mt-0">
              <Button variant="outline" size="icon" className="rounded-lg bg-card shadow-sm hover:shadow-md transition-shadow">
-                <Linkedin className="h-6 w-6 text-foreground fill-foreground" />
+                <Linkedin className="h-6 w-6 text-foreground" />
              </Button>
              <Button variant="outline" size="icon" className="rounded-lg bg-card shadow-sm hover:shadow-md transition-shadow">
                 <Dribbble className="h-6 w-6 text-foreground" />
              </Button>
              <Button variant="outline" size="icon" className="rounded-lg bg-card shadow-sm hover:shadow-md transition-shadow">
-                <Twitter className="h-5 w-5 text-foreground fill-foreground" />
+                <X className="h-5 w-5 text-foreground" />
              </Button>
           </div>
         </div>
