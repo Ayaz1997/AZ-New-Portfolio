@@ -13,9 +13,9 @@ export function AboutSection() {
         </p>
       </div>
 
-      <div className="mt-24 relative max-w-5xl mx-auto">
-        {/* Images */}
-        <div className="relative w-fit mx-auto">
+      <div className="mt-24 relative max-w-5xl mx-auto h-[600px]">
+        {/* Image 1: Creately */}
+        <div className="absolute top-0 left-0 w-[450px] z-10">
           <Image
             src="https://placehold.co/450x300.png"
             alt="Creately Landingpage"
@@ -24,13 +24,14 @@ export function AboutSection() {
             className="rounded-xl shadow-2xl -rotate-3"
             data-ai-hint="website screenshot"
           />
-          <div className="absolute top-1/2 left-0 -translate-x-full -translate-y-full -ml-8 -rotate-12">
-            <DoodleArrow className="w-20 h-20 text-foreground" />
-            <p className="font-caption text-3xl font-bold -mt-8 -ml-8">Creately Landingpage</p>
+          <div className="absolute top-8 -left-28 -translate-y-full -ml-8 -rotate-12">
+            <DoodleArrow className="w-24 h-24 text-foreground" />
+            <p className="font-caption text-3xl font-bold -mt-16 -ml-8">Creately Landingpage</p>
           </div>
         </div>
 
-        <div className="relative mt-[-100px] ml-auto w-fit mr-10">
+        {/* Image 2: Mailorant */}
+        <div className="absolute top-20 right-0 w-[450px] z-20">
            <Image
             src="https://placehold.co/450x300.png"
             alt="Mailorant Landingpage"
@@ -39,13 +40,14 @@ export function AboutSection() {
             className="rounded-xl shadow-2xl rotate-2"
             data-ai-hint="website screenshot"
           />
-           <div className="absolute top-1/2 right-0 translate-x-full -translate-y-1/2 mr-4 rotate-12">
-            <DoodleArrow className="w-20 h-20 text-foreground scale-x-[-1]" />
-            <p className="font-caption text-3xl font-bold -mt-10 -mr-4 text-right">Mailorant Landingpage</p>
+           <div className="absolute top-8 -right-28 translate-x-0 -translate-y-full mr-4 rotate-12">
+            <DoodleArrow className="w-24 h-24 text-foreground scale-x-[-1]" />
+            <p className="font-caption text-3xl font-bold -mt-14 -mr-12 text-right">Mailorant Landingpage</p>
           </div>
         </div>
 
-        <div className="relative mt-[-100px] mx-auto w-fit ml-10">
+        {/* Image 3: Optitask */}
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[450px] z-30">
            <Image
             src="https://placehold.co/450x300.png"
             alt="Optitask Landingpage"
@@ -54,9 +56,9 @@ export function AboutSection() {
             className="rounded-xl shadow-2xl -rotate-1"
             data-ai-hint="dashboard analytics"
           />
-           <div className="absolute bottom-0 left-0 -translate-x-3/4 translate-y-1/4 -ml-20 rotate-[-30deg]">
-            <DoodleArrow className="w-20 h-20 text-foreground" />
-            <p className="font-caption text-3xl font-bold -mt-2 -ml-16">Optitask Landingpage</p>
+           <div className="absolute bottom-8 -left-32 translate-y-1/4 -ml-20 rotate-[-20deg]">
+            <DoodleArrow className="w-24 h-24 text-foreground scale-y-[-1]" />
+            <p className="font-caption text-3xl font-bold -mt-8 -ml-16">Optitask Landingpage</p>
           </div>
         </div>
       </div>

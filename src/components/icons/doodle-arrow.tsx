@@ -3,7 +3,7 @@ import type { SVGProps } from "react";
 export function DoodleArrow(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
-      viewBox="0 0 74 38"
+      viewBox="0 0 106 72"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       stroke="currentColor"
@@ -12,7 +12,9 @@ export function DoodleArrow(props: SVGProps<SVGSVGElement>) {
       strokeLinejoin="round"
       {...props}
     >
-      <path d="M2 35.8941C14.3333 30.7275 39.8 17.0941 72 2M72 2L62.8333 13.5M72 2L55 9.83333" />
+      <path d="M2.20312 69.5C2.20312 69.5 56.7031 62 103.703 2.5" />
+      <path d="M103.703 2.5L88.7031 16.5" />
+      <path d="M103.703 2.5L92.7031 22" />
     </svg>
   );
 }
