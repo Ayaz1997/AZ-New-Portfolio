@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { DoodleCircle } from '@/components/icons/doodle-circle';
+import { Menu } from 'lucide-react';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 
 export function Header() {
   const navItems = [
@@ -34,6 +36,31 @@ export function Header() {
         <Button size="lg" className="hidden md:flex rounded-full px-6 font-semibold bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/40 transition-all duration-300 hover:-translate-y-1">
           Discuss Project
         </Button>
+        <div className="md:hidden">
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon">
+                <Menu className="h-6 w-6" />
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right">
+              <nav className="flex flex-col items-center space-y-8 mt-16">
+                {navItems.map((item) => (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className="capitalize text-2xl text-muted-foreground hover:text-primary transition-colors relative"
+                  >
+                     {item.name === activePath && (
+                      <DoodleCircle className="absolute -top-2 -left-4 w-[80px] h-12 text-primary" />
+                    )}
+                    <span className="relative z-10">{item.name}</span>
+                  </Link>
+                ))}
+              </nav>
+            </SheetContent>
+          </Sheet>
+        </div>
       </div>
     </header>
   );
