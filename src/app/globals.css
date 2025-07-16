@@ -4,45 +4,54 @@
 
 @layer base {
   :root, .theme-orange {
-    --background: 0 0% 98%;
+    --background: 24 50% 98%; /* Lighter, warmer off-white */
     --foreground: 20 14.3% 4.1%;
-    --card: 0 0% 100%;
+    --card: 24 50% 98%;
     --card-foreground: 20 14.3% 4.1%;
-    --popover: 0 0% 100%;
+    --popover: 24 50% 98%;
     --popover-foreground: 20 14.3% 4.1%;
     --primary: 27 87% 67%;
     --primary-shadow: 27 87% 57%;
     --primary-foreground: 0 0% 98%;
-    --secondary: 60 4.8% 95.9%;
+    --secondary: 24 10% 95%;
     --secondary-foreground: 24 9.8% 10%;
-    --muted: 60 4.8% 95.9%;
+    --muted: 24 10% 95%;
     --muted-foreground: 24 5.4% 63.9%;
-    --accent: 60 4.8% 95.9%;
+    --accent: 24 10% 92%;
     --accent-foreground: 24 9.8% 10%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 60 9.1% 97.8%;
-    --border: 20 5.9% 90%;
-    --input: 20 5.9% 90%;
+    --border: 24 5.9% 90%;
+    --input: 24 5.9% 90%;
     --ring: 27 87% 67%;
     --radius: 0.5rem;
   }
 
   .theme-violet {
+    --background: 259 30% 98%;
     --primary: 259 63% 60%;
     --primary-shadow: 259 63% 50%;
     --ring: 259 63% 60%;
+    --accent: 259 30% 92%;
+    --secondary: 259 30% 95%;
   }
 
   .theme-indigo {
+    --background: 238 40% 98%;
     --primary: 238 82% 62%;
     --primary-shadow: 238 82% 52%;
     --ring: 238 82% 62%;
+    --accent: 238 40% 92%;
+    --secondary: 238 40% 95%;
   }
 
   .theme-rose {
+    --background: 343 40% 98%;
     --primary: 343 80% 50%;
     --primary-shadow: 343 80% 40%;
     --ring: 343 80% 50%;
+    --accent: 343 40% 92%;
+    --secondary: 343 40% 95%;
   }
 
   .dark {
