@@ -12,6 +12,7 @@ export default {
       fontFamily: {
         body: ['Inter', 'sans-serif'],
         headline: ['Cormorant Garamond', 'serif'],
+        caption: ['Caveat', 'cursive'],
         code: ['monospace'],
       },
       colors: {
