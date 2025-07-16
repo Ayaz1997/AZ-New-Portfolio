@@ -32,7 +32,7 @@ export function HeroSection() {
 
         <div className="mt-12 flex flex-col md:flex-row md:flex-wrap items-start md:items-center gap-4">
           <div className="flex items-center gap-4">
-            <Button size="lg" className="px-8 bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/40 transition-all duration-300 hover:-translate-y-1">
+            <Button size="lg" className="px-8 bg-gradient-to-r from-primary to-orange-400 text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/40 transition-all duration-300 hover:-translate-y-1">
               <MessageCircle className="mr-2 h-5 w-5" />
               Talk With Me
             </Button>
