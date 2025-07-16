@@ -9,11 +9,11 @@ export function HeroSection() {
       <div className="max-w-4xl">
         <div className="flex items-center gap-4">
           <Image
-            src="https://placehold.co/80x80.png"
+            src="/ayaz-avatar.png"
             alt="Ayaz's avatar"
             width={80}
             height={80}
-            className="rounded-2xl shadow-lg w-16 h-16 md:w-20 md:h-20"
+            className="rounded-2xl shadow-lg w-16 h-16 md:w-20 md:h-20 -rotate-3"
             data-ai-hint="man avatar"
           />
           <h2 className="font-headline text-4xl md:text-7xl font-bold text-foreground">
