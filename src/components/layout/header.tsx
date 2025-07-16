@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { DoodleCircle } from '@/components/icons/doodle-circle';
-import { Menu } from 'lucide-react';
+import { Menu, MessageCircle } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 
 export function Header() {
@@ -33,7 +33,8 @@ export function Header() {
             </Link>
           ))}
         </nav>
-        <Button size="lg" className="hidden md:flex rounded-full px-6 font-semibold bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/40 transition-all duration-300 hover:-translate-y-1">
+        <Button size="lg" className="hidden md:flex px-6 font-semibold bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/40 transition-all duration-300 hover:-translate-y-1">
+          <MessageCircle className="mr-2 h-5 w-5" />
           Discuss Project
         </Button>
         <div className="md:hidden">
