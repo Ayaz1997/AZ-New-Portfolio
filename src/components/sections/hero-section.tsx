@@ -9,7 +9,7 @@ export function HeroSection() {
       <div className="max-w-4xl">
         <div className="flex items-center gap-4">
           <Image
-            src="/ayaz-avatar.png"
+            src="https://placehold.co/80x80.png"
             alt="Ayaz's avatar"
             width={80}
             height={80}
