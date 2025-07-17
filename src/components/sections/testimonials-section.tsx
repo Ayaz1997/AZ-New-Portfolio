@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { QuoteIcon } from "@/components/icons/quote";
@@ -9,13 +10,7 @@ const testimonials = [
     company: 'Marketing Director, Spotify',
     avatarUrl: 'https://placehold.co/40x40.png',
     avatarHint: 'man avatar',
-    testimonial: 'We needed a modern, high-converting website, and the Bravio team delivered beyond expectations. Their design and SEO expertise helped us increase conversion rate by 800% in just two weeks. Highly recommend!',
-    metric: '8X',
-    metricDescription: 'Increase in conversion rate',
-    companyLogoUrl: 'https://placehold.co/24x24.png',
-    companyLogoHint: 'spotify logo',
-    span: 'col-span-1 md:col-span-2',
-    size: 'large',
+    testimonial: 'We needed a modern, high-converting website, and the Bravio team delivered beyond expectations. Their design and SEO expertise helped us increase conversion rate significantly in just two weeks. Highly recommend!',
   },
   {
     name: 'Sarah Mitchel',
@@ -23,12 +18,6 @@ const testimonials = [
     avatarUrl: 'https://placehold.co/40x40.png',
     avatarHint: 'woman avatar',
     testimonial: 'From branding to website design, every detail was meticulously handled. The team’s expertise helped us launch faster, and the results have been phenomenal!',
-    metric: '2X',
-    metricDescription: 'Increase in lead generation',
-    companyLogoUrl: 'https://placehold.co/24x24.png',
-    companyLogoHint: 'google logo',
-    span: 'col-span-1 md:col-span-2',
-    size: 'large',
   },
   {
     name: 'Tom Becker',
@@ -36,10 +25,6 @@ const testimonials = [
     avatarUrl: 'https://placehold.co/40x40.png',
     avatarHint: 'man avatar',
     testimonial: 'Their animation work took our product videos to the next level. The team truly understands user experience and storytelling.',
-    companyLogoUrl: 'https://placehold.co/24x24.png',
-    companyLogoHint: 'abstract logo',
-    span: 'col-span-1',
-    size: 'small',
   },
   {
     name: 'Sarah Mitchel',
@@ -47,55 +32,34 @@ const testimonials = [
     avatarUrl: 'https://placehold.co/40x40.png',
     avatarHint: 'woman avatar',
     testimonial: 'The team nailed our MVP design with a fast turnaround and incredible attention to detail. The final product felt polished and professional.',
-    span: 'col-span-1',
-    size: 'small',
     dark: true,
   },
 ];
 
-const TestimonialCard = ({ testimonial }: { testimonial: (typeof testimonials)[0] }) => (
+const TestimonialCard = ({ testimonial }: { testimonial: (typeof testimonials)[number] }) => (
   <Card className={cn(
     "p-6 md:p-8 rounded-2xl flex flex-col justify-between h-full",
-    testimonial.dark ? 'bg-foreground text-background' : 'bg-card',
-    testimonial.span
+    testimonial.dark ? 'bg-foreground text-background' : 'bg-card'
   )}>
     <div>
-      {testimonial.metric && (
-        <div className="mb-4">
-          <p className="font-headline text-5xl font-bold">{testimonial.metric}</p>
-          <p className="text-muted-foreground">{testimonial.metricDescription}</p>
-        </div>
-      )}
       <div className="mb-4">
         <QuoteIcon className={cn("w-6 h-6 mb-2", testimonial.dark ? "text-primary" : "text-red-400")} />
         <p className={cn("text-lg", testimonial.dark ? 'text-muted-foreground' : 'text-foreground/80')}>{testimonial.testimonial}</p>
       </div>
     </div>
-    <div className="flex justify-between items-center mt-6">
-      <div className="flex items-center gap-4">
-        <Image
-          src={testimonial.avatarUrl}
-          alt={testimonial.name}
-          width={40}
-          height={40}
-          className="rounded-full"
-          data-ai-hint={testimonial.avatarHint}
-        />
-        <div>
-          <p className="font-bold">{testimonial.name}</p>
-          <p className={cn("text-sm", testimonial.dark ? 'text-muted-foreground' : 'text-foreground/60')}>{testimonial.company}</p>
-        </div>
+    <div className="flex items-center gap-4 mt-6">
+      <Image
+        src={testimonial.avatarUrl}
+        alt={testimonial.name}
+        width={40}
+        height={40}
+        className="rounded-full"
+        data-ai-hint={testimonial.avatarHint}
+      />
+      <div>
+        <p className="font-bold">{testimonial.name}</p>
+        <p className={cn("text-sm", testimonial.dark ? 'text-muted-foreground' : 'text-foreground/60')}>{testimonial.company}</p>
       </div>
-      {testimonial.companyLogoUrl && (
-        <Image
-          src={testimonial.companyLogoUrl}
-          alt={`${testimonial.company} logo`}
-          width={24}
-          height={24}
-          className="object-contain"
-          data-ai-hint={testimonial.companyLogoHint}
-        />
-      )}
     </div>
   </Card>
 );
@@ -112,13 +76,13 @@ export function TestimonialsSection() {
         </p>
       </div>
 
-      <div className="mt-16 grid grid-cols-1 md:grid-cols-4 gap-8">
-        <div className="md:col-span-2">
-            <TestimonialCard testimonial={testimonials[0]} />
+      <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="flex flex-col gap-8">
+          <TestimonialCard testimonial={testimonials[0]} />
         </div>
-        <div className="md:col-span-2 space-y-8">
+        <div className="flex flex-col gap-8">
           <TestimonialCard testimonial={testimonials[1]} />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             <TestimonialCard testimonial={testimonials[2]} />
             <TestimonialCard testimonial={testimonials[3]} />
           </div>
