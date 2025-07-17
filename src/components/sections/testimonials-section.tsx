@@ -2,7 +2,6 @@
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { QuoteIcon } from "@/components/icons/quote";
-import { cn } from "@/lib/utils";
 
 const testimonials = [
   {
@@ -35,15 +34,13 @@ const testimonials = [
   },
 ];
 
-const TestimonialCard = ({ testimonial }: { testimonial: (typeof testimonials)[number] }) => (
-  <Card className="p-6 md:p-8 rounded-2xl flex flex-col justify-between bg-card">
-    <div>
-      <div className="mb-4">
-        <QuoteIcon className="w-10 h-10 mb-4 text-primary" />
-        <p className="text-lg text-foreground/80">{testimonial.testimonial}</p>
-      </div>
+const TestimonialCard = ({ testimonial, className }: { testimonial: (typeof testimonials)[number], className?: string }) => (
+  <Card className={`p-6 md:p-8 rounded-2xl flex flex-col justify-between bg-card ${className}`}>
+    <div className="flex-grow">
+      <QuoteIcon className="w-10 h-10 mb-4 text-primary" />
+      <p className="text-foreground/80 text-lg leading-relaxed line-clamp-5">{testimonial.testimonial}</p>
     </div>
-    <div className="flex items-center gap-4 mt-6">
+    <div className="flex items-center gap-4 mt-6 flex-shrink-0">
       <Image
         src={testimonial.avatarUrl}
         alt={testimonial.name}
@@ -73,10 +70,8 @@ export function TestimonialsSection() {
       </div>
 
       <div className="mt-16 max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="flex flex-col gap-8">
-            <TestimonialCard testimonial={testimonials[0]} />
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+          <TestimonialCard testimonial={testimonials[0]} className="md:h-[420px]" />
           <div className="flex flex-col gap-8">
             <TestimonialCard testimonial={testimonials[1]} />
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
