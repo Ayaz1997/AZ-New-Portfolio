@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -42,14 +41,14 @@ export function ServicesSection() {
       </div>
 
       <div className="mt-16 flex justify-center">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl">
           {services.map((service, index) => (
             <Card 
               key={index} 
-              className="overflow-hidden rounded-xl shadow-sm hover:shadow-md transition-shadow"
+              className="overflow-hidden rounded-2xl border bg-card shadow-lg"
             >
               <CardContent className="p-0">
-                <div className="aspect-[5/3] flex items-center justify-center p-4 bg-muted/40">
+                <div className="aspect-[5/3] flex items-center justify-center p-4">
                   <Image
                     src={service.imageUrl}
                     alt={service.title}
@@ -59,9 +58,9 @@ export function ServicesSection() {
                     data-ai-hint={service.imageHint}
                   />
                 </div>
-                <div className="p-4 pt-4">
+                <div className="p-6">
                   <h3 className="text-xl font-bold font-headline text-foreground">{service.title}</h3>
-                  <p className="mt-1 text-muted-foreground text-sm">{service.description}</p>
+                  <p className="mt-2 text-muted-foreground">{service.description}</p>
                 </div>
               </CardContent>
             </Card>
