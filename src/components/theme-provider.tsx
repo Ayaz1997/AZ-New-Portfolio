@@ -1,3 +1,4 @@
+
 'use client';
 
 import * as React from 'react';
@@ -30,9 +31,12 @@ export function ThemeProvider({
   defaultTheme?: Theme;
   storageKey?: string;
 }) {
-  const [theme, setTheme] = React.useState<Theme>(
-    () => (typeof window !== 'undefined' ? (localStorage.getItem(storageKey) as Theme) || defaultTheme : defaultTheme)
-  );
+  const [theme, setTheme] = React.useState<Theme>(defaultTheme);
+
+  React.useEffect(() => {
+    const storedTheme = (localStorage.getItem(storageKey) as Theme) || defaultTheme;
+    setTheme(storedTheme);
+  }, [storageKey, defaultTheme]);
 
   React.useEffect(() => {
     const root = window.document.documentElement;
@@ -47,20 +51,19 @@ export function ThemeProvider({
       root.classList.add('light');
       root.classList.add(`theme-${theme}`);
     }
-  }, [theme]);
+    localStorage.setItem(storageKey, theme);
+  }, [theme, storageKey]);
 
   const cycleTheme = () => {
     const currentIndex = themes.indexOf(theme);
     const nextIndex = (currentIndex + 1) % themes.length;
     const nextTheme = themes[nextIndex];
     setTheme(nextTheme);
-    localStorage.setItem(storageKey, nextTheme);
   };
 
   const value = {
     theme,
     setTheme: (newTheme: Theme) => {
-      localStorage.setItem(storageKey, newTheme);
       setTheme(newTheme);
     },
     cycleTheme,
