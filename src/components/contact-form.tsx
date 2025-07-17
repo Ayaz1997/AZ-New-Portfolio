@@ -1,9 +1,9 @@
+
 'use client';
 
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import { submitContactForm } from '@/app/actions';
 import { Button } from '@/components/ui/button';
 import {
   Form,
@@ -15,45 +15,29 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { useToast } from '@/hooks/use-toast';
-import { Rocket } from 'lucide-react';
 
 const contactFormSchema = z.object({
-  firstName: z.string().min(1, 'First name is required'),
-  lastName: z.string().min(1, 'Last name is required'),
+  name: z.string().min(1, 'Name is required'),
+  email: z.string().email('Invalid email address'),
   message: z.string().min(10, 'Message must be at least 10 characters.'),
 });
 
 type ContactFormValues = z.infer<typeof contactFormSchema>;
 
 export function ContactForm() {
-  const { toast } = useToast();
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
-      firstName: '',
-      lastName: '',
+      name: '',
+      email: '',
       message: '',
     },
   });
 
-  const onSubmit = async (data: ContactFormValues) => {
-    const result = await submitContactForm(data);
-    if (result.message) {
-      toast({
-        title: 'Success!',
-        description: result.message,
-      });
-      form.reset();
-    } else {
-      // This part would handle server-side validation errors if any.
-      // For this example, we primarily rely on client-side validation.
-      toast({
-        variant: 'destructive',
-        title: 'Uh oh! Something went wrong.',
-        description: 'There was a problem with your submission.',
-      });
-    }
+  const onSubmit = (data: ContactFormValues) => {
+    const subject = encodeURIComponent(`Project inquiry from ${data.name}`);
+    const body = encodeURIComponent(`${data.message}\n\nFrom: ${data.name}\nEmail: ${data.email}`);
+    window.location.href = `mailto:hey@ayaz.me?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -62,12 +46,12 @@ export function ContactForm() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <FormField
             control={form.control}
-            name="firstName"
+            name="name"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="sr-only">First Name</FormLabel>
+                <FormLabel className="sr-only">Your name</FormLabel>
                 <FormControl>
-                  <Input placeholder="First Name" {...field} />
+                  <Input placeholder="Your name" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -75,12 +59,12 @@ export function ContactForm() {
           />
           <FormField
             control={form.control}
-            name="lastName"
+            name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="sr-only">Last Name</FormLabel>
+                <FormLabel className="sr-only">Email id</FormLabel>
                 <FormControl>
-                  <Input placeholder="Last Name" {...field} />
+                  <Input placeholder="Email id" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -92,9 +76,9 @@ export function ContactForm() {
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="sr-only">Message</FormLabel>
+              <FormLabel className="sr-only">What are you looking to build?</FormLabel>
               <FormControl>
-                <Textarea placeholder="Write your message" {...field} rows={6} />
+                <Textarea placeholder="What are you looking to build?" {...field} rows={6} />
               </FormControl>
               <FormMessage />
             </FormItem>

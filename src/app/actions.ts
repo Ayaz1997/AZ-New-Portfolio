@@ -1,11 +1,12 @@
+
 'use server';
 
 import { z } from 'zod';
 
 const contactFormSchema = z.object({
-  firstName: z.string().min(1, 'First name is required'),
-  lastName: z.string().min(1, 'Last name is required'),
-  message: z.string().min(1, 'Message is required'),
+  name: z.string().min(1, 'Name is required'),
+  email: z.string().email('Invalid email address'),
+  message: z.string().min(10, 'Message must be at least 10 characters.'),
 });
 
 export async function submitContactForm(formData: unknown) {
