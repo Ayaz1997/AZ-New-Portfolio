@@ -1,4 +1,5 @@
 import { Header } from "@/components/layout/header";
+import { Footer } from "@/components/layout/footer";
 import { AboutSection } from "@/components/sections/about-section";
 import { ExperienceSection } from "@/components/sections/experience-section";
 import { HeroSection } from "@/components/sections/hero-section";
@@ -16,6 +17,7 @@ export default function HomePage() {
         <PortfolioSection />
         <ExperienceSection />
       </main>
+      <Footer />
     </div>
   );
 }
