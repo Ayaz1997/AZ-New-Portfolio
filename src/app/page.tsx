@@ -1,6 +1,7 @@
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { AboutSection } from "@/components/sections/about-section";
+import { DesignProcessSection } from "@/components/sections/design-process-section";
 import { ExperienceSection } from "@/components/sections/experience-section";
 import { HeroSection } from "@/components/sections/hero-section";
 import { PortfolioSection } from "@/components/sections/portfolio-section";
@@ -16,8 +17,9 @@ export default function HomePage() {
         <AboutSection />
         <ServicesSection />
         <PortfolioSection />
-        <ExperienceSection />
+        <DesignProcessSection />
         <TestimonialsSection />
+        <ExperienceSection />
       </main>
       <Footer />
     </div>
