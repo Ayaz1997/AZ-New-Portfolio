@@ -45,7 +45,7 @@ export function ServicesSection() {
           {services.map((service, index) => (
             <Card 
               key={index} 
-              className="overflow-hidden rounded-2xl border bg-card"
+              className="overflow-hidden rounded-2xl border shadow-lg dark:shadow-primary/10"
             >
               <CardContent className="p-0">
                 <div className="p-4">

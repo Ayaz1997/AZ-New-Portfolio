@@ -54,13 +54,7 @@ export function PortfolioSection() {
             <div key={index} className="group">
               <Card 
                 className={cn(
-                  `rounded-2xl border-none shadow-none transition-transform duration-300 ease-in-out
-                  bg-[radial-gradient(58.74%_50%_at_50.3%_50%,#FFF_0%,#FAFAFA_100%)]
-                  dark:bg-[radial-gradient(58.74%_50%_at_50.3%_50%,#1F1F1F_0%,#1A1A1A_100%)]
-                  border border-[#E4E4E4] dark:border-[#2E2E2E]
-                  shadow-[0px_0px_8px_0px_rgba(0,0,0,0.06)]
-                  dark:shadow-[0px_0px_8px_0px_rgba(255,255,255,0.02)]
-                  group-hover:scale-105`,
+                  `rounded-2xl border shadow-lg dark:shadow-primary/10 transition-transform duration-300 ease-in-out group-hover:scale-105`,
                   index % 2 === 0 ? "group-hover:rotate-2" : "group-hover:-rotate-2"
                 )}
               >

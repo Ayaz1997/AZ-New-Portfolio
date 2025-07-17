@@ -35,7 +35,7 @@ const testimonials = [
 ];
 
 const TestimonialCard = ({ testimonial, className }: { testimonial: (typeof testimonials)[number], className?: string }) => (
-  <Card className={`p-6 md:p-8 rounded-2xl flex flex-col justify-between bg-card ${className}`}>
+  <Card className={`p-6 md:p-8 rounded-2xl flex flex-col justify-between shadow-lg dark:shadow-primary/10 ${className}`}>
     <div className="flex-grow">
       <QuoteIcon className="w-10 h-10 mb-6 text-primary" />
       <p className="text-foreground/80 text-lg leading-relaxed line-clamp-[7]">{testimonial.testimonial}</p>
