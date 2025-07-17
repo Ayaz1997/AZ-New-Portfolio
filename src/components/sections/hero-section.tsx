@@ -38,7 +38,7 @@ export function HeroSection() {
             </Button>
             <Button size="lg" variant="outline">
               <Download className="mr-2 h-5 w-5" />
-              Download my CV
+              Download Resume
             </Button>
           </div>
           <div className="flex items-center gap-3 mt-8 md:mt-0">
