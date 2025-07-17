@@ -45,7 +45,7 @@ export function DesignProcessSection() {
           {processes.map((process, index) => (
             <Card 
               key={index} 
-              className="overflow-hidden rounded-2xl border bg-card"
+              className="overflow-hidden rounded-2xl bg-transparent shadow-none border-dotted border-2"
             >
               <CardContent className="p-0">
                 <div className="p-4">
