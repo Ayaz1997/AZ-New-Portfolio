@@ -3,7 +3,7 @@ import { DoodleArrow } from "@/components/icons/doodle-arrow";
 
 export function AboutSection() {
   return (
-    <section className="container mx-auto py-10 md:py-32 px-8 md:px-16">
+    <section className="container mx-auto py-10 md:py-24 px-8 md:px-16">
       <div className="text-center max-w-4xl mx-auto">
         <h2 className="font-headline text-4xl md:text-6xl font-bold text-foreground">
           About Me
@@ -24,9 +24,9 @@ export function AboutSection() {
             className="rounded-xl shadow-2xl -rotate-3"
             data-ai-hint="website screenshot"
           />
-          <div className="absolute top-8 -left-28 -translate-y-full -ml-8 -rotate-12">
-            <DoodleArrow className="w-24 h-24 text-foreground" />
-            <p className="font-caption text-3xl font-bold -mt-16 -ml-8">Creately Landingpage</p>
+          <div className="absolute -top-4 -left-32">
+            <DoodleArrow className="w-24 h-24 text-foreground -rotate-12" />
+            <p className="font-caption text-3xl font-bold -mt-16 ml-4 -rotate-12">Creately Landingpage</p>
           </div>
         </div>
 
@@ -40,9 +40,9 @@ export function AboutSection() {
             className="rounded-xl shadow-2xl rotate-2"
             data-ai-hint="website screenshot"
           />
-           <div className="absolute top-8 -right-28 translate-x-0 -translate-y-full mr-4 rotate-12">
-            <DoodleArrow className="w-24 h-24 text-foreground scale-x-[-1]" />
-            <p className="font-caption text-3xl font-bold -mt-14 -mr-12 text-right">Mailorant Landingpage</p>
+           <div className="absolute top-0 -right-28">
+            <DoodleArrow className="w-24 h-24 text-foreground scale-x-[-1] rotate-12" />
+            <p className="font-caption text-3xl font-bold -mt-14 -mr-4 rotate-12 text-right">Mailorant</p>
           </div>
         </div>
 
@@ -56,9 +56,9 @@ export function AboutSection() {
             className="rounded-xl shadow-2xl -rotate-1"
             data-ai-hint="dashboard analytics"
           />
-           <div className="absolute bottom-8 -left-32 translate-y-1/4 -ml-20 rotate-[-20deg]">
-            <DoodleArrow className="w-24 h-24 text-foreground scale-y-[-1]" />
-            <p className="font-caption text-3xl font-bold -mt-8 -ml-16">Optitask Landingpage</p>
+           <div className="absolute -bottom-8 -left-36">
+            <DoodleArrow className="w-24 h-24 text-foreground scale-y-[-1] -rotate-[30deg]" />
+            <p className="font-caption text-3xl font-bold -mt-10 -ml-4 -rotate-[20deg]">Optitask</p>
           </div>
         </div>
       </div>
