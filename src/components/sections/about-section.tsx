@@ -13,7 +13,7 @@ export function AboutSection() {
         </p>
       </div>
 
-      <div className="mt-20 md:mt-24 relative max-w-lg mx-auto h-[500px] md:h-[400px]">
+      <div className="mt-20 md:mt-24 relative max-w-lg mx-auto h-[500px] md:h-[400px] overflow-hidden">
         {/* Image 1: Creately */}
         <div className="absolute top-0 -left-4 sm:left-0 w-[180px] md:w-[250px] z-10 group">
           <div className="bg-card p-2 border rounded-xl shadow-2xl -rotate-3 dark:border-muted group-hover:rotate-0 transition-transform duration-300">

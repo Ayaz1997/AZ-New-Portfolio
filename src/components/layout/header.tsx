@@ -15,8 +15,8 @@ export function Header() {
   const activePath = 'home';
 
   return (
-    <header className="py-6">
-      <div className="container mx-auto flex items-center justify-between px-4 md:px-16">
+    <header className="py-6 px-4 md:px-16">
+      <div className="container mx-auto flex items-center justify-between">
         <Link href="/" className="font-headline text-3xl font-bold text-foreground">
           Ayaz.
         </Link>
@@ -62,7 +62,7 @@ export function Header() {
                     <span className="relative z-10">{item.name}</span>
                   </Link>
                 ))}
-                <div className="absolute bottom-10">
+                 <div className="pt-8">
                   <ThemeToggle />
                 </div>
               </nav>
