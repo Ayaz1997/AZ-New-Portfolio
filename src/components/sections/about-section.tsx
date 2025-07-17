@@ -26,9 +26,9 @@ export function AboutSection() {
               data-ai-hint="website screenshot"
             />
           </div>
-          <div className="absolute -top-8 -left-16">
-            <DoodleArrow className="w-24 h-24 text-foreground -rotate-[35deg]" />
-            <p className="font-caption text-3xl font-bold -mt-10 ml-8 -rotate-12">Creately</p>
+          <div className="absolute top-2 -left-20">
+            <DoodleArrow className="w-24 h-24 text-foreground rotate-[15deg]" />
+            <p className="font-caption text-3xl font-bold -mt-24 ml-4 rotate-[-15deg]">Creately</p>
           </div>
         </div>
 
@@ -44,9 +44,9 @@ export function AboutSection() {
               data-ai-hint="website screenshot"
             />
           </div>
-           <div className="absolute -top-4 -right-20">
-            <DoodleArrow className="w-24 h-24 text-foreground scale-x-[-1] rotate-[25deg]" />
-            <p className="font-caption text-3xl font-bold -mt-14 mr-4 rotate-12 text-right">Mailorant</p>
+           <div className="absolute -top-10 -right-16">
+            <DoodleArrow className="w-24 h-24 text-foreground scale-x-[-1] rotate-[-15deg]" />
+            <p className="font-caption text-3xl font-bold -mt-10 mr-12 rotate-[15deg] text-right">Mailorant</p>
           </div>
         </div>
 
@@ -62,9 +62,9 @@ export function AboutSection() {
               data-ai-hint="dashboard analytics"
             />
           </div>
-           <div className="absolute -bottom-12 left-24">
-            <DoodleArrow className="w-24 h-24 text-foreground scale-y-[-1] rotate-[25deg]" />
-            <p className="font-caption text-3xl font-bold -mt-20 ml-12 -rotate-[15deg]">Optitask</p>
+           <div className="absolute -bottom-16 left-1/2 -translate-x-1/2">
+            <DoodleArrow className="w-24 h-24 text-foreground scale-y-[-1] rotate-[15deg]" />
+            <p className="font-caption text-3xl font-bold -mt-10 -rotate-6">Optitask</p>
           </div>
         </div>
       </div>
