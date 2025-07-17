@@ -9,7 +9,7 @@ export function HeroSection() {
       <div className="max-w-4xl">
         <div className="flex items-center gap-4">
           <Image
-            src="/az-80.png"
+            src="https://placehold.co/80x80.png"
             alt="Ayaz's avatar"
             width={80}
             height={80}
@@ -17,7 +17,7 @@ export function HeroSection() {
             data-ai-hint="man avatar"
           />
           <h2 className="font-headline text-4xl md:text-7xl font-bold text-foreground">
-            Hello! I&apos;m Ayaz
+            Hello! I'm Ayaz
           </h2>
         </div>
         
@@ -32,11 +32,11 @@ export function HeroSection() {
 
         <div className="mt-12 flex flex-col md:flex-row items-start md:items-center justify-between">
           <div className="flex items-center gap-4">
-            <Button size="lg" className="px-8">
+            <Button size="lg">
               <MessageCircle className="mr-2 h-5 w-5" />
               Talk With Me
             </Button>
-            <Button size="lg" variant="outline" className="px-8">
+            <Button size="lg" variant="outline">
               <Download className="mr-2 h-5 w-5" />
               Download my CV
             </Button>

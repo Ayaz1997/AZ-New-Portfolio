@@ -36,7 +36,7 @@ export function Header() {
         </nav>
         <div className="hidden md:flex items-center gap-4">
           <ThemeToggle />
-          <Button size="lg" className="px-6 font-semibold">
+          <Button size="lg" className="font-semibold">
             <MessageCircle className="mr-2 h-5 w-5" />
             Discuss Project
           </Button>
