@@ -32,19 +32,15 @@ const testimonials = [
     avatarUrl: 'https://placehold.co/40x40.png',
     avatarHint: 'woman avatar',
     testimonial: 'The team nailed our MVP design with a fast turnaround and incredible attention to detail. The final product felt polished and professional.',
-    dark: true,
   },
 ];
 
 const TestimonialCard = ({ testimonial }: { testimonial: (typeof testimonials)[number] }) => (
-  <Card className={cn(
-    "p-6 md:p-8 rounded-2xl flex flex-col justify-between h-full",
-    testimonial.dark ? 'bg-foreground text-background' : 'bg-card'
-  )}>
+  <Card className="p-6 md:p-8 rounded-2xl flex flex-col justify-between h-full bg-card">
     <div>
       <div className="mb-4">
-        <QuoteIcon className={cn("w-6 h-6 mb-2", testimonial.dark ? "text-primary" : "text-red-400")} />
-        <p className={cn("text-lg", testimonial.dark ? 'text-muted-foreground' : 'text-foreground/80')}>{testimonial.testimonial}</p>
+        <QuoteIcon className="w-10 h-10 mb-4 text-primary" />
+        <p className="text-lg text-foreground/80">{testimonial.testimonial}</p>
       </div>
     </div>
     <div className="flex items-center gap-4 mt-6">
@@ -57,8 +53,8 @@ const TestimonialCard = ({ testimonial }: { testimonial: (typeof testimonials)[n
         data-ai-hint={testimonial.avatarHint}
       />
       <div>
-        <p className="font-bold">{testimonial.name}</p>
-        <p className={cn("text-sm", testimonial.dark ? 'text-muted-foreground' : 'text-foreground/60')}>{testimonial.company}</p>
+        <p className="font-bold text-foreground">{testimonial.name}</p>
+        <p className="text-sm text-muted-foreground">{testimonial.company}</p>
       </div>
     </div>
   </Card>
@@ -76,15 +72,17 @@ export function TestimonialsSection() {
         </p>
       </div>
 
-      <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="flex flex-col gap-8">
-          <TestimonialCard testimonial={testimonials[0]} />
-        </div>
-        <div className="flex flex-col gap-8">
-          <TestimonialCard testimonial={testimonials[1]} />
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-            <TestimonialCard testimonial={testimonials[2]} />
-            <TestimonialCard testimonial={testimonials[3]} />
+      <div className="mt-16 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="flex flex-col gap-8">
+            <TestimonialCard testimonial={testimonials[0]} />
+          </div>
+          <div className="flex flex-col gap-8">
+            <TestimonialCard testimonial={testimonials[1]} />
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+              <TestimonialCard testimonial={testimonials[2]} />
+              <TestimonialCard testimonial={testimonials[3]} />
+            </div>
           </div>
         </div>
       </div>
