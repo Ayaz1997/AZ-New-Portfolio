@@ -13,52 +13,52 @@ export function AboutSection() {
         </p>
       </div>
 
-      <div className="mt-24 relative max-w-4xl mx-auto h-[550px]">
+      <div className="mt-24 relative max-w-2xl mx-auto h-[450px]">
         {/* Image 1: Creately */}
-        <div className="absolute top-0 left-0 w-[400px] z-10">
+        <div className="absolute top-0 left-0 w-[300px] z-10">
           <Image
             src="https://placehold.co/400x267.png"
             alt="Creately Landingpage"
-            width={400}
-            height={267}
+            width={300}
+            height={200}
             className="rounded-xl shadow-2xl -rotate-3"
             data-ai-hint="website screenshot"
           />
-          <div className="absolute -top-4 -left-28">
-            <DoodleArrow className="w-24 h-24 text-foreground -rotate-12" />
-            <p className="font-caption text-3xl font-bold -mt-16 ml-4 -rotate-12">Creately</p>
+          <div className="absolute -top-8 -left-20">
+            <DoodleArrow className="w-24 h-24 text-foreground -rotate-[25deg]" />
+            <p className="font-caption text-3xl font-bold -mt-12 ml-4 -rotate-12">Creately</p>
           </div>
         </div>
 
         {/* Image 2: Mailorant */}
-        <div className="absolute top-20 right-0 w-[400px] z-20">
+        <div className="absolute top-16 right-0 w-[300px] z-20">
            <Image
             src="https://placehold.co/400x267.png"
             alt="Mailorant Landingpage"
-            width={400}
-            height={267}
+            width={300}
+            height={200}
             className="rounded-xl shadow-2xl rotate-2"
             data-ai-hint="website screenshot"
           />
-           <div className="absolute top-0 -right-24">
+           <div className="absolute -top-4 -right-24">
             <DoodleArrow className="w-24 h-24 text-foreground scale-x-[-1] rotate-12" />
             <p className="font-caption text-3xl font-bold -mt-14 -mr-4 rotate-12 text-right">Mailorant</p>
           </div>
         </div>
 
         {/* Image 3: Optitask */}
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[400px] z-30">
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[300px] z-30">
            <Image
             src="https://placehold.co/400x267.png"
             alt="Optitask Landingpage"
-            width={400}
-            height={267}
+            width={300}
+            height={200}
             className="rounded-xl shadow-2xl -rotate-1"
             data-ai-hint="dashboard analytics"
           />
-           <div className="absolute -bottom-12 -left-32">
-            <DoodleArrow className="w-24 h-24 text-foreground scale-y-[-1] -rotate-[30deg]" />
-            <p className="font-caption text-3xl font-bold -mt-12 ml-4 -rotate-[20deg]">Optitask</p>
+           <div className="absolute -bottom-16 left-28">
+            <DoodleArrow className="w-24 h-24 text-foreground scale-y-[-1] rotate-[15deg]" />
+            <p className="font-caption text-3xl font-bold -mt-24 ml-12 -rotate-[15deg]">Optitask</p>
           </div>
         </div>
       </div>
