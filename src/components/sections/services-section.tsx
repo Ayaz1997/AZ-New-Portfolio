@@ -41,24 +41,24 @@ export function ServicesSection() {
       </div>
 
       <div className="mt-16 flex justify-center">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl">
           {services.map((service, index) => (
             <Card 
               key={index} 
               className="overflow-hidden rounded-2xl border bg-card shadow-lg"
             >
               <CardContent className="p-0">
-                <div className="aspect-[5/3] flex items-center justify-center p-4">
+                <div className="p-4">
                   <Image
                     src={service.imageUrl}
                     alt={service.title}
                     width={500}
                     height={300}
-                    className="w-full h-auto object-contain"
+                    className="w-full h-auto object-contain rounded-lg"
                     data-ai-hint={service.imageHint}
                   />
                 </div>
-                <div className="p-6">
+                <div className="p-6 pt-0">
                   <h3 className="text-xl font-bold font-headline text-foreground">{service.title}</h3>
                   <p className="mt-2 text-muted-foreground">{service.description}</p>
                 </div>
