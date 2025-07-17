@@ -34,7 +34,12 @@ export function ThemeProvider({
   const [theme, setTheme] = React.useState<Theme>(defaultTheme);
 
   React.useEffect(() => {
-    const storedTheme = (localStorage.getItem(storageKey) as Theme) || defaultTheme;
+    let storedTheme: Theme;
+    try {
+      storedTheme = (localStorage.getItem(storageKey) as Theme) || defaultTheme;
+    } catch (e) {
+      storedTheme = defaultTheme;
+    }
     setTheme(storedTheme);
   }, [storageKey, defaultTheme]);
 
@@ -46,12 +51,16 @@ export function ThemeProvider({
 
     if (theme === 'dark') {
       root.classList.add('dark');
-      root.classList.add('theme-orange'); // Default color theme for dark mode
+      root.classList.add('theme-violet'); // Default color theme for dark mode
     } else {
       root.classList.add('light');
       root.classList.add(`theme-${theme}`);
     }
-    localStorage.setItem(storageKey, theme);
+    try {
+      localStorage.setItem(storageKey, theme);
+    } catch (e) {
+      // Ignore
+    }
   }, [theme, storageKey]);
 
   const cycleTheme = () => {

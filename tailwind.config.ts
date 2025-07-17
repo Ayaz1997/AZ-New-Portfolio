@@ -68,12 +68,12 @@ export default {
         },
       },
       borderRadius: {
-        lg: 'calc(var(--radius) + 4px)',
+        lg: 'calc(var(--radius) + 6px)',
         md: 'var(--radius)',
         sm: 'calc(var(--radius) - 2px)',
       },
       boxShadow: {
-        primary: '0px 8px 16px 0px hsla(var(--primary-shadow), 0.4)',
+        primary: '0px 8px 16px 0px hsla(var(--primary-shadow), 0.1)',
       },
       keyframes: {
         'accordion-down': {
