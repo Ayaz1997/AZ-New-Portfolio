@@ -16,7 +16,7 @@ export function Header() {
 
   return (
     <header className="py-6">
-      <div className="container mx-auto flex items-center justify-between px-8 md:px-16">
+      <div className="container mx-auto flex items-center justify-between px-4 md:px-16">
         <Link href="/" className="font-headline text-3xl font-bold text-foreground">
           Ayaz.
         </Link>
@@ -48,8 +48,8 @@ export function Header() {
                 <Menu className="h-6 w-6" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right">
-              <nav className="flex flex-col items-center space-y-8 mt-16">
+            <SheetContent side="right" className="w-full">
+              <nav className="flex flex-col items-center justify-center h-full space-y-8">
                 {navItems.map((item) => (
                   <Link
                     key={item.name}
@@ -62,7 +62,7 @@ export function Header() {
                     <span className="relative z-10">{item.name}</span>
                   </Link>
                 ))}
-                <div className="mt-8">
+                <div className="mt-8 absolute bottom-10">
                   <ThemeToggle />
                 </div>
               </nav>

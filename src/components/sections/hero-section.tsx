@@ -5,7 +5,7 @@ import { StickyNoteIcon } from "@/components/icons/sticky-note";
 
 export function HeroSection() {
   return (
-    <section className="container mx-auto py-10 md:py-24 px-8 md:px-16">
+    <section className="container mx-auto py-10 md:py-24 px-4 md:px-16">
       <div className="max-w-4xl">
         <div className="flex items-center gap-4">
           <Image
@@ -13,7 +13,7 @@ export function HeroSection() {
             alt="Ayaz's avatar"
             width={80}
             height={80}
-            className="rounded-2xl shadow-lg w-16 h-16 md:w-20 md:h-20 -rotate-3"
+            className="rounded-2xl shadow-lg w-16 h-16 -rotate-3"
             data-ai-hint="man avatar"
           />
           <h2 className="font-headline text-4xl md:text-7xl font-bold text-foreground">
@@ -21,10 +21,10 @@ export function HeroSection() {
           </h2>
         </div>
         
-        <h1 className="font-headline text-4xl md:text-7xl font-medium text-foreground mt-8 leading-tight">
+        <h1 className="font-headline text-3xl md:text-7xl font-medium text-foreground mt-8 leading-tight">
           I Design Intuitive Digital Products With A
-          <span className="inline-flex align-middle mx-2 md:mx-4">
-            <StickyNoteIcon className="h-12 w-12 md:h-16 md:w-16 -rotate-6 text-yellow-300" />
+          <span className="inline-flex align-middle mx-2">
+            <StickyNoteIcon className="h-10 w-10 md:h-16 md:w-16 -rotate-6 text-yellow-300" />
           </span>
           Focus On <br className="hidden md:block" />
           <span className="text-muted-foreground/50">Clarity, Empathy, And Precision.</span>

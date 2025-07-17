@@ -30,7 +30,7 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section className="container mx-auto py-10 md:py-24 px-8 md:px-16">
+    <section className="container mx-auto py-10 md:py-24 px-4 md:px-16">
       <div className="text-center max-w-4xl mx-auto">
         <h2 className="font-headline text-4xl md:text-6xl font-bold text-foreground">
           My Services
@@ -45,7 +45,7 @@ export function ServicesSection() {
           {services.map((service, index) => (
             <Card 
               key={index} 
-              className="overflow-hidden rounded-2xl border bg-card shadow-lg"
+              className="overflow-hidden rounded-2xl border bg-card"
             >
               <CardContent className="p-0">
                 <div className="p-4">

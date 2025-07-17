@@ -3,12 +3,12 @@ import { DoodleArrow } from "@/components/icons/doodle-arrow";
 
 export function AboutSection() {
   return (
-    <section className="container mx-auto py-10 md:py-24 px-8 md:px-16">
+    <section className="container mx-auto py-10 md:py-24 px-4 md:px-16 overflow-x-hidden">
       <div className="text-center max-w-4xl mx-auto">
         <h2 className="font-headline text-4xl md:text-6xl font-bold text-foreground">
           About Me
         </h2>
-        <p className="mt-8 text-xl md:text-2xl text-muted-foreground leading-relaxed">
+        <p className="mt-8 text-lg md:text-2xl text-muted-foreground leading-relaxed">
           Hi! 👋 I&apos;m Ayaz, A <span className="font-bold text-foreground">UI/UX Designer</span> With 2 Years Of Experience In SaaS Design. I&apos;ve Helped <span className="font-bold text-foreground">20K+ International Clients</span> 🌍 Build Clean And <span className="font-bold text-foreground">User-Friendly Interfaces</span> ✨.
         </p>
       </div>
