@@ -44,13 +44,13 @@ export function ServicesSection() {
         {services.map((service, index) => (
           <Card key={index} className="bg-card/50 dark:bg-card/10 border-border/50 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
             <CardContent className="p-0">
-              <div className="bg-muted/40 aspect-[5/3] flex items-center justify-center">
+              <div className="bg-muted/40 aspect-[5/3] flex items-center justify-center p-8">
                 <Image
                   src={service.imageUrl}
                   alt={service.title}
                   width={500}
                   height={300}
-                  className="w-full h-full object-cover"
+                  className="w-full h-auto object-contain"
                   data-ai-hint={service.imageHint}
                 />
               </div>
