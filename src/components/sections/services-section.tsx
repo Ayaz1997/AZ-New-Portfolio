@@ -42,21 +42,21 @@ export function ServicesSection() {
       </div>
 
       <div className="mt-16 flex justify-center">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-4xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-3xl">
           {services.map((service, index) => (
-            <Card key={index} className="bg-card/50 dark:bg-card/10 border-border/50 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+            <Card key={index} className="bg-card border-border/50 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
               <CardContent className="p-0">
-                <div className="bg-muted/40 aspect-[5/3] flex items-center justify-center p-8">
+                <div className="aspect-[5/3] flex items-center justify-center p-8">
                   <Image
                     src={service.imageUrl}
                     alt={service.title}
                     width={500}
                     height={300}
-                    className="w-full h-auto object-contain"
+                    className="w-full h-auto object-contain rounded-lg"
                     data-ai-hint={service.imageHint}
                   />
                 </div>
-                <div className="p-6 md:p-8">
+                <div className="p-6 md:p-8 pt-0">
                   <h3 className="text-2xl font-bold font-headline text-foreground">{service.title}</h3>
                   <p className="mt-2 text-muted-foreground">{service.description}</p>
                 </div>
