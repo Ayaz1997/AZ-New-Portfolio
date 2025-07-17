@@ -31,25 +31,25 @@ export function Footer() {
         </p>
 
         <div className="flex items-center gap-3 mt-8">
-          <Link href="#">
-            <Button asChild variant="outline" size="icon" className="rounded-lg bg-card shadow-sm hover:shadow-md transition-shadow">
-              <Linkedin className="h-6 w-6 text-foreground" />
-            </Button>
+          <Link href="#" target="_blank" rel="noopener noreferrer">
+             <Button variant="outline" size="icon" className="rounded-lg bg-card shadow-sm hover:shadow-md transition-shadow">
+                <Linkedin className="h-6 w-6 text-foreground" />
+             </Button>
           </Link>
-           <Link href="#">
-            <Button asChild variant="outline" size="icon" className="rounded-lg bg-card shadow-sm hover:shadow-md transition-shadow p-2.5">
-              <XIcon className="h-5 w-5 text-foreground" />
-            </Button>
+           <Link href="#" target="_blank" rel="noopener noreferrer">
+             <Button variant="outline" size="icon" className="rounded-lg bg-card shadow-sm hover:shadow-md transition-shadow p-2.5">
+                <XIcon className="h-5 w-5 text-foreground" />
+             </Button>
           </Link>
-          <Link href="#">
-            <Button asChild variant="outline" size="icon" className="rounded-lg bg-card shadow-sm hover:shadow-md transition-shadow">
-              <Dribbble className="h-6 w-6 text-foreground" />
-            </Button>
+          <Link href="#" target="_blank" rel="noopener noreferrer">
+             <Button variant="outline" size="icon" className="rounded-lg bg-card shadow-sm hover:shadow-md transition-shadow">
+                <Dribbble className="h-6 w-6 text-foreground" />
+             </Button>
           </Link>
           <Link href="mailto:hey@ayaz.me">
-            <Button asChild variant="outline" size="icon" className="rounded-lg bg-card shadow-sm hover:shadow-md transition-shadow">
-              <Mail className="h-6 w-6 text-foreground" />
-            </Button>
+             <Button variant="outline" size="icon" className="rounded-lg bg-card shadow-sm hover:shadow-md transition-shadow">
+                <Mail className="h-6 w-6 text-foreground" />
+             </Button>
           </Link>
         </div>
 
