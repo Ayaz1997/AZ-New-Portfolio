@@ -44,7 +44,10 @@ export function ServicesSection() {
       <div className="mt-16 flex justify-center">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl">
           {services.map((service, index) => (
-            <Card key={index} className="overflow-hidden shadow-none rounded-2xl border border-[#D0D0D0] bg-[#F5F5F5] dark:border-border/20 dark:bg-muted/30">
+            <Card 
+              key={index} 
+              className="overflow-hidden rounded-[16px] border border-[#E4E4E4] bg-[radial-gradient(58.74%_50%_at_50.3%_50%,#FFF_0%,#FAFAFA_100%)] shadow-[0px_0px_8px_0px_rgba(0,0,0,0.16)] dark:border-border/20 dark:bg-muted/30"
+            >
               <CardContent className="p-0">
                 <div className="aspect-[5/3] flex items-center justify-center p-4">
                   <Image
