@@ -62,7 +62,7 @@ export function Header() {
                     <span className="relative z-10">{item.name}</span>
                   </Link>
                 ))}
-                <div className="mt-8 absolute bottom-10">
+                <div className="absolute bottom-10">
                   <ThemeToggle />
                 </div>
               </nav>

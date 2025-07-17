@@ -30,8 +30,8 @@ export function HeroSection() {
           <span className="text-muted-foreground/50">Clarity, Empathy, And Precision.</span>
         </h1>
 
-        <div className="mt-12 flex flex-col md:flex-row items-start md:items-center justify-between">
-          <div className="flex items-center gap-4">
+        <div className="mt-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+          <div className="flex flex-wrap items-center gap-4">
             <Button size="lg">
               <MessageCircle className="mr-2 h-5 w-5" />
               Talk With Me
@@ -41,7 +41,7 @@ export function HeroSection() {
               Download Resume
             </Button>
           </div>
-          <div className="flex items-center gap-3 mt-8 md:mt-0">
+          <div className="flex items-center gap-3">
              <Button variant="outline" size="icon" className="rounded-lg bg-card shadow-sm hover:shadow-md transition-shadow">
                 <Linkedin className="h-6 w-6 text-foreground" />
              </Button>
