@@ -110,21 +110,21 @@ export function ExperienceSection() {
 
       <div className="mt-16 relative">
         <div 
-          className="absolute left-1/2 -translate-x-1/2 md:left-[35%] top-2 h-full w-0.5 bg-border" 
+          className="absolute left-1/2 -translate-x-1/2 md:left-[calc(35%)] top-2 h-full w-0.5 bg-border" 
           aria-hidden="true"
         />
 
         <div className="space-y-12">
           {experiences.map((exp, index) => (
             <div key={index} className="relative flex flex-col md:flex-row items-start gap-8">
-              <div className="flex-shrink-0 w-full md:w-[35%] flex md:justify-end pr-8">
+              <div className="flex-shrink-0 w-full md:w-[35%] flex md:justify-end md:pr-8">
                 <div className="relative flex items-center justify-start md:justify-end w-full">
                   <span className="bg-card border text-muted-foreground text-sm font-medium py-1 px-3 rounded-md z-10">
                     {exp.date}
                   </span>
                   <div className="absolute right-0 md:left-full md:-right-4 h-0.5 w-8 bg-border hidden md:block" />
                   
-                  <div className="absolute top-1/2 -left-4 md:left-auto md:-right-5 h-3 w-3 rounded-full bg-border border-4 box-content border-background z-10 -translate-y-1/2">
+                  <div className="absolute top-1/2 -left-4 md:left-auto md:right-0 md:-translate-x-1/2 h-3 w-3 rounded-full bg-border border-4 box-content border-background z-10 -translate-y-1/2">
                     {exp.isCurrent && (
                        <PushPinIcon className="absolute -top-6 -left-1.5 w-6 h-6 text-primary z-20" />
                     )}
@@ -132,7 +132,7 @@ export function ExperienceSection() {
                 </div>
               </div>
 
-              <Card className="w-full md:w-1/2 shadow-lg dark:shadow-primary/10">
+              <Card className="w-full md:max-w-md shadow-lg dark:shadow-primary/10">
                  <CardHeader className="bg-muted/50 p-6 rounded-t-lg">
                   <div className="flex justify-between items-start">
                     <div>
@@ -168,3 +168,5 @@ export function ExperienceSection() {
     </section>
   );
 }
+
+    
