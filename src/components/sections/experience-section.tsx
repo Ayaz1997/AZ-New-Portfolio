@@ -72,30 +72,6 @@ const experiences = [
   },
 ];
 
-function PushPinIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg 
-      xmlns="http://www.w3.org/2000/svg" 
-      width="24" 
-      height="24" 
-      viewBox="0 0 24 24" 
-      fill="none" 
-      stroke="currentColor" 
-      strokeWidth="2" 
-      strokeLinecap="round" 
-      strokeLinejoin="round"
-      {...props}
-    >
-      <path d="M12 22V12" />
-      <path d="M12 12L8 8" />
-      <path d="M12 12L16 8" />
-      <path d="M12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12Z" fill="#ff4d4d" stroke="#ff4d4d"/>
-      <path d="M12 4C13.1046 4 14 3.10457 14 2C14 0.89543 13.1046 0 12 0C10.8954 0 10 0.89543 10 2C10 3.10457 10.8954 4 12 4Z" fill="#ff4d4d" stroke="#ff4d4d" />
-    </svg>
-  );
-}
-
-
 export function ExperienceSection() {
   return (
     <section className="container mx-auto py-10 md:py-24 px-4">
@@ -119,10 +95,10 @@ export function ExperienceSection() {
             <div key={index} className="relative flex flex-col md:flex-row items-start gap-8">
               <div className="flex-shrink-0 w-full md:w-[35%] flex md:justify-end md:pr-8">
                 <div className="relative flex items-center justify-start md:justify-end w-full">
-                   {exp.isCurrent && (
-                       <PushPinIcon className="absolute -top-3 left-1/2 -translate-x-1/2 md:left-auto md:-top-5 md:right-4 w-6 h-6 text-primary z-20" />
-                    )}
-                  <span className="bg-card border text-muted-foreground text-sm font-medium py-1 px-3 rounded-full z-10">
+                  <span className={cn(
+                    "border text-sm font-medium py-1 px-3 rounded-full z-10",
+                    exp.isCurrent ? "bg-green-100 text-green-800 border-green-200 dark:bg-green-900/50 dark:text-green-300 dark:border-green-700" : "bg-card text-muted-foreground"
+                  )}>
                     {exp.date}
                   </span>
                 </div>
