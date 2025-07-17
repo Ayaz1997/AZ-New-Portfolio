@@ -1,5 +1,6 @@
 import { Header } from "@/components/layout/header";
 import { AboutSection } from "@/components/sections/about-section";
+import { ExperienceSection } from "@/components/sections/experience-section";
 import { HeroSection } from "@/components/sections/hero-section";
 import { PortfolioSection } from "@/components/sections/portfolio-section";
 import { ServicesSection } from "@/components/sections/services-section";
@@ -13,6 +14,7 @@ export default function HomePage() {
         <AboutSection />
         <ServicesSection />
         <PortfolioSection />
+        <ExperienceSection />
       </main>
     </div>
   );
