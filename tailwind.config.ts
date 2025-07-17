@@ -69,9 +69,12 @@ export default {
         },
       },
       borderRadius: {
-        lg: 'var(--radius)',
-        md: 'calc(var(--radius) - 2px)',
-        sm: 'calc(var(--radius) - 4px)',
+        lg: 'calc(var(--radius) + 4px)',
+        md: 'var(--radius)',
+        sm: 'calc(var(--radius) - 2px)',
+      },
+      boxShadow: {
+        primary: '0px 8px 16px 0px var(--tw-shadow-color, hsl(var(--primary-shadow)))',
       },
       keyframes: {
         'accordion-down': {
