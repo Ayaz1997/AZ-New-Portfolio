@@ -94,9 +94,13 @@ export function ExperienceSection() {
           {experiences.map((exp, index) => (
             <div key={index} className="relative flex flex-col md:flex-row items-start gap-8">
               <div className="flex-shrink-0 w-full md:w-[35%] flex md:justify-end md:pr-8">
-                <div className="relative flex items-center justify-start md:justify-end w-full">
+                <div className="relative w-full flex items-center justify-start md:justify-end">
+                   <div 
+                    className="absolute right-0 top-1/2 -translate-y-1/2 h-3 w-3 rounded-full bg-border z-0" 
+                    aria-hidden="true"
+                  />
                   <span className={cn(
-                    "border text-sm font-medium py-1 px-3 rounded-full z-10",
+                    "border text-sm font-medium py-1 px-3 rounded-full z-10 relative",
                     exp.isCurrent ? "bg-green-100 text-green-800 border-green-200 dark:bg-green-900/50 dark:text-green-300 dark:border-green-700" : "bg-card text-muted-foreground"
                   )}>
                     {exp.date}
