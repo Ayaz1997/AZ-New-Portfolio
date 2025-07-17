@@ -54,16 +54,16 @@ export function PortfolioSection() {
         </p>
       </div>
 
-      <div className="mt-16 max-w-6xl mx-auto">
+      <div className="mt-16 max-w-4xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
           {projects.map((project, index) => (
-            <div key={index} className="relative">
+            <div key={index} className="relative group">
               {project.isRotated && (
-                <div className="absolute inset-0 bg-muted rounded-2xl"></div>
+                <div className={cn("absolute inset-0 bg-muted rounded-2xl", project.rotationClass)}></div>
               )}
               <Card 
                 className={cn(
-                  `relative rounded-2xl border-none shadow-none transition-transform duration-300 ease-in-out hover:scale-105
+                  `relative rounded-2xl border-none shadow-none transition-transform duration-300 ease-in-out group-hover:scale-105
                   bg-[radial-gradient(58.74%_50%_at_50.3%_50%,#FFF_0%,#FAFAFA_100%)]
                   dark:bg-[radial-gradient(58.74%_50%_at_50.3%_50%,#1F1F1F_0%,#1A1A1A_100%)]
                   border border-[#E4E4E4] dark:border-[#2E2E2E]
