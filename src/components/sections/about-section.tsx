@@ -13,10 +13,10 @@ export function AboutSection() {
         </p>
       </div>
 
-      <div className="mt-24 relative max-w-lg mx-auto h-[400px]">
+      <div className="mt-20 md:mt-24 relative max-w-lg mx-auto h-[500px] md:h-[400px]">
         {/* Image 1: Creately */}
-        <div className="absolute top-0 left-0 w-[250px] z-10">
-          <div className="bg-card p-2 border rounded-xl shadow-2xl -rotate-3 dark:border-muted">
+        <div className="absolute top-0 left-0 w-[180px] md:w-[250px] z-10 group">
+          <div className="bg-card p-2 border rounded-xl shadow-2xl -rotate-3 dark:border-muted group-hover:rotate-0 transition-transform duration-300">
             <Image
               src="https://placehold.co/400x267.png"
               alt="Creately Landingpage"
@@ -26,15 +26,15 @@ export function AboutSection() {
               data-ai-hint="website screenshot"
             />
           </div>
-          <div className="absolute top-2 -left-20">
-            <DoodleArrow className="w-24 h-24 text-foreground rotate-[15deg]" />
-            <p className="font-caption text-3xl font-bold -mt-24 ml-4 rotate-[-15deg]">Creately</p>
+          <div className="absolute top-4 -left-12 md:top-2 md:-left-20 transform -rotate-15">
+            <DoodleArrow className="w-20 h-20 md:w-24 md:h-24 text-foreground rotate-[15deg]" />
+            <p className="font-caption text-2xl md:text-3xl font-bold -mt-20 md:-mt-24 ml-2 md:ml-4 -rotate-[5deg]">Creately</p>
           </div>
         </div>
 
         {/* Image 2: Mailorant */}
-        <div className="absolute top-12 right-0 w-[250px] z-20">
-          <div className="bg-card p-2 border rounded-xl shadow-2xl rotate-2 dark:border-muted">
+        <div className="absolute top-24 right-0 w-[180px] md:w-[250px] z-20 group">
+           <div className="bg-card p-2 border rounded-xl shadow-2xl rotate-2 dark:border-muted group-hover:rotate-0 transition-transform duration-300">
             <Image
               src="https://placehold.co/400x267.png"
               alt="Mailorant Landingpage"
@@ -44,15 +44,15 @@ export function AboutSection() {
               data-ai-hint="website screenshot"
             />
           </div>
-           <div className="absolute -top-10 -right-16">
-            <DoodleArrow className="w-24 h-24 text-foreground scale-x-[-1] rotate-[-15deg]" />
-            <p className="font-caption text-3xl font-bold -mt-10 mr-12 rotate-[15deg] text-right">Mailorant</p>
+           <div className="absolute -top-12 -right-12 md:-top-10 md:-right-16 transform rotate-15">
+            <DoodleArrow className="w-20 h-20 md:w-24 md:h-24 text-foreground scale-x-[-1] rotate-[-15deg]" />
+            <p className="font-caption text-2xl md:text-3xl font-bold -mt-[70px] md:-mt-10 mr-12 rotate-[5deg] text-right">Mailorant</p>
           </div>
         </div>
 
         {/* Image 3: Optitask */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 w-[250px] z-30">
-          <div className="bg-card p-2 border rounded-xl shadow-2xl -rotate-1 dark:border-muted">
+        <div className="absolute bottom-16 md:bottom-8 left-1/2 -translate-x-1/2 w-[180px] md:w-[250px] z-30 group">
+           <div className="bg-card p-2 border rounded-xl shadow-2xl -rotate-1 dark:border-muted group-hover:rotate-0 transition-transform duration-300">
             <Image
               src="https://placehold.co/400x267.png"
               alt="Optitask Landingpage"
@@ -62,9 +62,9 @@ export function AboutSection() {
               data-ai-hint="dashboard analytics"
             />
           </div>
-           <div className="absolute -bottom-16 left-1/2 -translate-x-1/2">
-            <DoodleArrow className="w-24 h-24 text-foreground scale-y-[-1] rotate-[15deg]" />
-            <p className="font-caption text-3xl font-bold -mt-10 -rotate-6">Optitask</p>
+           <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 md:-bottom-16">
+            <DoodleArrow className="w-20 h-20 md:w-24 md:h-24 text-foreground scale-y-[-1] rotate-[15deg]" />
+            <p className="font-caption text-2xl md:text-3xl font-bold -mt-10 -rotate-6">Optitask</p>
           </div>
         </div>
       </div>
