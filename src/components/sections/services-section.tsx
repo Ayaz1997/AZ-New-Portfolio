@@ -1,0 +1,67 @@
+import Image from "next/image";
+import { Card, CardContent } from "@/components/ui/card";
+
+const services = [
+  {
+    title: "Web Design",
+    description: "Designing Clean, Responsive, And User-Friendly Websites.",
+    imageUrl: "https://placehold.co/500x300.png",
+    imageHint: "website design"
+  },
+  {
+    title: "Branding & Logo",
+    description: "Creating Unique And Memorable Brand Identities That Resonate With Audience.",
+    imageUrl: "https://placehold.co/500x300.png",
+    imageHint: "app icon"
+  },
+  {
+    title: "Character Design",
+    description: "Creating Unique Characters That Capture Your Brand's Essence.",
+    imageUrl: "https://placehold.co/500x300.png",
+    imageHint: "character design"
+  },
+  {
+    title: "Mobile Design",
+    description: "Designing Seamless And Engaging Mobile Experiences For All Devices.",
+    imageUrl: "https://placehold.co/500x300.png",
+    imageHint: "mobile app"
+  },
+];
+
+export function ServicesSection() {
+  return (
+    <section className="container mx-auto py-10 md:py-24 px-8 md:px-16">
+      <div className="text-center max-w-4xl mx-auto">
+        <h2 className="font-headline text-4xl md:text-6xl font-bold text-foreground">
+          My Services
+        </h2>
+        <p className="mt-4 text-lg md:text-xl text-muted-foreground leading-relaxed">
+          I Offer A Range Of UI/UX Design Services Tailored To Help Businesses Create Seamless And Engaging Digital Experiences
+        </p>
+      </div>
+
+      <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+        {services.map((service, index) => (
+          <Card key={index} className="bg-card/50 dark:bg-card/10 border-border/50 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+            <CardContent className="p-0">
+              <div className="bg-muted/40 aspect-[5/3] flex items-center justify-center">
+                <Image
+                  src={service.imageUrl}
+                  alt={service.title}
+                  width={500}
+                  height={300}
+                  className="w-full h-full object-cover"
+                  data-ai-hint={service.imageHint}
+                />
+              </div>
+              <div className="p-6 md:p-8">
+                <h3 className="text-2xl font-bold font-headline text-foreground">{service.title}</h3>
+                <p className="mt-2 text-muted-foreground">{service.description}</p>
+              </div>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+    </section>
+  );
+}

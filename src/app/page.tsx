@@ -1,6 +1,7 @@
 import { Header } from "@/components/layout/header";
 import { AboutSection } from "@/components/sections/about-section";
 import { HeroSection } from "@/components/sections/hero-section";
+import { ServicesSection } from "@/components/sections/services-section";
 
 export default function HomePage() {
   return (
@@ -9,6 +10,7 @@ export default function HomePage() {
       <main className="flex-1">
         <HeroSection />
         <AboutSection />
+        <ServicesSection />
       </main>
     </div>
   );
