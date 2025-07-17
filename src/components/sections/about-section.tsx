@@ -13,45 +13,59 @@ export function AboutSection() {
         </p>
       </div>
 
-      <div className="mt-20 md:mt-24 relative max-w-lg mx-auto h-[400px] md:h-[350px]">
-        {/* Image 1: Creately */}
-        <div className="absolute top-0 -left-4 sm:left-0 w-[180px] md:w-[250px] z-10 group">
-          <div className="bg-card p-2 border rounded-xl shadow-2xl -rotate-6 dark:border-muted group-hover:rotate-0 transition-transform duration-300">
+      <div className="mt-20 md:mt-24 relative max-w-2xl mx-auto h-[450px] md:h-[400px]">
+        {/* Image 1: Creately - Polaroid */}
+        <div className="absolute top-0 -left-4 sm:left-0 w-[180px] md:w-[250px] z-10 group transition-transform duration-300 ease-in-out hover:scale-110 hover:z-40">
+          <div className="bg-card p-3 pb-8 border rounded-lg shadow-2xl -rotate-12 dark:border-muted group-hover:rotate-0">
             <Image
               src="https://placehold.co/400x267.png"
               alt="Creately Landingpage"
               width={250}
               height={167}
-              className="rounded-md"
+              className="rounded-sm"
               data-ai-hint="website screenshot"
             />
           </div>
         </div>
 
-        {/* Image 2: Mailorant */}
-        <div className="absolute top-32 -right-4 sm:right-0 w-[180px] md:w-[250px] z-20 group">
-           <div className="bg-card p-2 border rounded-xl shadow-2xl rotate-6 dark:border-muted group-hover:rotate-0 transition-transform duration-300">
+        {/* Image 2: Mailorant - Polaroid */}
+        <div className="absolute top-32 right-0 sm:-right-8 w-[180px] md:w-[250px] z-20 group transition-transform duration-300 ease-in-out hover:scale-110 hover:z-40">
+           <div className="bg-card p-3 pb-8 border rounded-lg shadow-2xl rotate-12 dark:border-muted group-hover:rotate-0">
             <Image
               src="https://placehold.co/400x267.png"
               alt="Mailorant Landingpage"
               width={250}
               height={167}
-              className="rounded-md"
+              className="rounded-sm"
               data-ai-hint="website screenshot"
             />
           </div>
         </div>
 
-        {/* Image 3: Optitask */}
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[180px] md:w-[250px] z-30 group">
-           <div className="bg-card p-2 border rounded-xl shadow-2xl rotate-2 dark:border-muted group-hover:rotate-0 transition-transform duration-300">
+        {/* Image 3: Optitask - Polaroid */}
+        <div className="absolute bottom-16 -left-4 sm:left-8 w-[180px] md:w-[250px] z-30 group transition-transform duration-300 ease-in-out hover:scale-110 hover:z-40">
+           <div className="bg-card p-3 pb-8 border rounded-lg shadow-2xl rotate-6 dark:border-muted group-hover:rotate-0">
             <Image
               src="https://placehold.co/400x267.png"
               alt="Optitask Landingpage"
               width={250}
               height={167}
-              className="rounded-md"
+              className="rounded-sm"
               data-ai-hint="dashboard analytics"
+            />
+          </div>
+        </div>
+        
+        {/* Image 4: New Project - Polaroid */}
+        <div className="absolute bottom-0 right-0 sm:right-8 w-[180px] md:w-[250px] z-20 group transition-transform duration-300 ease-in-out hover:scale-110 hover:z-40">
+           <div className="bg-card p-3 pb-8 border rounded-lg shadow-2xl -rotate-6 dark:border-muted group-hover:rotate-0">
+            <Image
+              src="https://placehold.co/400x267.png"
+              alt="New Project"
+              width={250}
+              height={167}
+              className="rounded-sm"
+              data-ai-hint="wireframe sketch"
             />
           </div>
         </div>
