@@ -12,7 +12,6 @@ const projects = [
     year: "2024",
     imageUrl: "https://placehold.co/600x400.png",
     imageHint: "website screenshot",
-    isRotated: false,
   },
   {
     title: "Socive - Social Media Analytics Landingpage",
@@ -20,8 +19,6 @@ const projects = [
     year: "2024",
     imageUrl: "https://placehold.co/600x400.png",
     imageHint: "dashboard analytics",
-    isRotated: true,
-    rotationClass: "md:rotate-2",
   },
   {
     title: "Akaru - Studio Design Landing Page",
@@ -29,8 +26,6 @@ const projects = [
     year: "2024",
     imageUrl: "https://placehold.co/600x400.png",
     imageHint: "design studio website",
-    isRotated: true,
-    rotationClass: "md:-rotate-2",
   },
   {
     title: "Mailorant - Inbox Mail Landing Page",
@@ -38,7 +33,6 @@ const projects = [
     year: "2024",
     imageUrl: "https://placehold.co/600x400.png",
     imageHint: "email application",
-    isRotated: false,
   },
 ];
 
@@ -57,19 +51,17 @@ export function PortfolioSection() {
       <div className="mt-16 max-w-4xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
           {projects.map((project, index) => (
-            <div key={index} className="relative group">
-              {project.isRotated && (
-                <div className={cn("absolute inset-0 bg-muted rounded-2xl", project.rotationClass)}></div>
-              )}
+            <div key={index} className="group">
               <Card 
                 className={cn(
-                  `relative rounded-2xl border-none shadow-none transition-transform duration-300 ease-in-out group-hover:scale-105
+                  `rounded-2xl border-none shadow-none transition-transform duration-300 ease-in-out
                   bg-[radial-gradient(58.74%_50%_at_50.3%_50%,#FFF_0%,#FAFAFA_100%)]
                   dark:bg-[radial-gradient(58.74%_50%_at_50.3%_50%,#1F1F1F_0%,#1A1A1A_100%)]
                   border border-[#E4E4E4] dark:border-[#2E2E2E]
                   shadow-[0px_0px_8px_0px_rgba(0,0,0,0.06)]
-                  dark:shadow-[0px_0px_8px_0px_rgba(255,255,255,0.02)]`,
-                  project.rotationClass
+                  dark:shadow-[0px_0px_8px_0px_rgba(255,255,255,0.02)]
+                  group-hover:scale-105`,
+                  index % 2 === 0 ? "group-hover:rotate-2" : "group-hover:-rotate-2"
                 )}
               >
                 <CardContent className="p-4">
