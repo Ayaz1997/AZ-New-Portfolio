@@ -26,7 +26,7 @@ export function Footer() {
     <footer className="container mx-auto py-10 px-4 md:px-16">
       <DoodleZigzag className="w-full h-4 text-border" />
       <div className="flex flex-col items-center text-center mt-16">
-        <p className="font-headline text-3xl md:text-5xl font-medium text-foreground max-w-2xl">
+        <p className="font-headline text-3xl md:text-5xl font-medium text-foreground">
           I craft bold ideas, one pixel at a time.
         </p>
 
