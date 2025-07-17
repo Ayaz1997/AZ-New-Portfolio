@@ -16,7 +16,7 @@ export function AboutSection() {
       <div className="mt-24 relative max-w-lg mx-auto h-[400px]">
         {/* Image 1: Creately */}
         <div className="absolute top-0 left-0 w-[250px] z-10">
-          <div className="bg-card p-2 border rounded-xl shadow-2xl -rotate-3">
+          <div className="bg-card p-2 border rounded-xl shadow-2xl -rotate-3 dark:border-muted">
             <Image
               src="https://placehold.co/400x267.png"
               alt="Creately Landingpage"
@@ -34,7 +34,7 @@ export function AboutSection() {
 
         {/* Image 2: Mailorant */}
         <div className="absolute top-12 right-0 w-[250px] z-20">
-          <div className="bg-card p-2 border rounded-xl shadow-2xl rotate-2">
+          <div className="bg-card p-2 border rounded-xl shadow-2xl rotate-2 dark:border-muted">
             <Image
               src="https://placehold.co/400x267.png"
               alt="Mailorant Landingpage"
@@ -52,7 +52,7 @@ export function AboutSection() {
 
         {/* Image 3: Optitask */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 w-[250px] z-30">
-          <div className="bg-card p-2 border rounded-xl shadow-2xl -rotate-1">
+          <div className="bg-card p-2 border rounded-xl shadow-2xl -rotate-1 dark:border-muted">
             <Image
               src="https://placehold.co/400x267.png"
               alt="Optitask Landingpage"
