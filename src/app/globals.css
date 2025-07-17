@@ -11,6 +11,8 @@
     --popover: 24 50% 98%;
     --popover-foreground: 20 14.3% 4.1%;
     --primary: 27 87% 67%;
+    --primary-gradient-start: 27 87% 72%;
+    --primary-gradient-end: 27 87% 62%;
     --primary-shadow: 27 87% 57%;
     --primary-foreground: 0 0% 98%;
     --secondary: 24 10% 95%;
@@ -30,6 +32,8 @@
   .theme-violet {
     --background: 259 30% 98%;
     --primary: 259 63% 60%;
+    --primary-gradient-start: 259 63% 65%;
+    --primary-gradient-end: 259 63% 55%;
     --primary-shadow: 259 63% 50%;
     --ring: 259 63% 60%;
     --accent: 259 30% 92%;
@@ -39,6 +43,8 @@
   .theme-indigo {
     --background: 238 40% 98%;
     --primary: 238 82% 62%;
+    --primary-gradient-start: 238 82% 67%;
+    --primary-gradient-end: 238 82% 57%;
     --primary-shadow: 238 82% 52%;
     --ring: 238 82% 62%;
     --accent: 238 40% 92%;
@@ -48,6 +54,8 @@
   .theme-rose {
     --background: 343 40% 98%;
     --primary: 343 80% 50%;
+    --primary-gradient-start: 343 80% 55%;
+    --primary-gradient-end: 343 80% 45%;
     --primary-shadow: 343 80% 40%;
     --ring: 343 80% 50%;
     --accent: 343 40% 92%;
@@ -62,6 +70,8 @@
     --popover: 20 14.3% 4.1%;
     --popover-foreground: 60 9.1% 97.8%;
     --primary: 27 87% 67%;
+    --primary-gradient-start: 27 87% 72%;
+    --primary-gradient-end: 27 87% 62%;
     --primary-shadow: 27 87% 57%;
     --primary-foreground: 24 9.8% 10%;
     --secondary: 12 6.5% 15.1%;
@@ -79,18 +89,24 @@
 
   .dark.theme-violet {
     --primary: 259 63% 60%;
+    --primary-gradient-start: 259 63% 65%;
+    --primary-gradient-end: 259 63% 55%;
     --primary-shadow: 259 63% 50%;
     --ring: 259 63% 60%;
   }
 
   .dark.theme-indigo {
     --primary: 238 82% 62%;
+    --primary-gradient-start: 238 82% 67%;
+    --primary-gradient-end: 238 82% 57%;
     --primary-shadow: 238 82% 52%;
     --ring: 238 82% 62%;
   }
 
   .dark.theme-rose {
     --primary: 343 80% 50%;
+    --primary-gradient-start: 343 80% 55%;
+    --primary-gradient-end: 343 80% 45%;
     --primary-shadow: 343 80% 40%;
     --ring: 343 80% 50%;
   }
