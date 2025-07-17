@@ -17,9 +17,9 @@ export default function HomePage() {
         <AboutSection />
         <ServicesSection />
         <PortfolioSection />
+        <ExperienceSection />
         <DesignProcessSection />
         <TestimonialsSection />
-        <ExperienceSection />
       </main>
       <Footer />
     </div>
