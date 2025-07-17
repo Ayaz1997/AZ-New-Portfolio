@@ -42,11 +42,11 @@ export function ServicesSection() {
       </div>
 
       <div className="mt-16 flex justify-center">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl">
           {services.map((service, index) => (
-            <Card key={index} className="bg-card border-border/50 rounded-2xl overflow-hidden">
+            <Card key={index} className="overflow-hidden shadow-none rounded-2xl border border-[#D0D0D0] bg-[#F5F5F5] dark:border-border/20 dark:bg-muted/30">
               <CardContent className="p-0">
-                <div className="aspect-[5/3] flex items-center justify-center p-6 bg-muted/40">
+                <div className="aspect-[5/3] flex items-center justify-center p-4">
                   <Image
                     src={service.imageUrl}
                     alt={service.title}
@@ -56,9 +56,9 @@ export function ServicesSection() {
                     data-ai-hint={service.imageHint}
                   />
                 </div>
-                <div className="p-6">
-                  <h3 className="text-2xl font-bold font-headline text-foreground">{service.title}</h3>
-                  <p className="mt-2 text-muted-foreground">{service.description}</p>
+                <div className="p-4 pt-0">
+                  <h3 className="text-xl font-bold font-headline text-foreground">{service.title}</h3>
+                  <p className="mt-1 text-muted-foreground text-sm">{service.description}</p>
                 </div>
               </CardContent>
             </Card>
