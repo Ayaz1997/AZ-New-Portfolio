@@ -16,7 +16,7 @@ const buttonVariants = cva(
         outline:
           "border border-input bg-gradient-to-b from-card to-secondary shadow-sm hover:shadow-md hover:-translate-y-px active:shadow-none active:translate-y-px",
         secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+          "btn-secondary relative overflow-hidden border border-secondary bg-secondary text-secondary-foreground shadow-[inset_0_1px_hsl(var(--secondary-foreground)/0.4),0_4px_6px_-1px_rgb(0_0_0/0.1),0_2px_4px_-2px_rgb(0_0_0/0.1)] hover:bg-secondary/90 active:bg-secondary active:shadow-[inset_0_1px_hsl(var(--secondary-foreground)/0.2)]",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
       },

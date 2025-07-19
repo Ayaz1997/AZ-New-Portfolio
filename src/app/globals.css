@@ -10,9 +10,9 @@
     --card-foreground: 20 14.3% 4.1%;
     --popover: 24 50% 98%;
     --popover-foreground: 20 14.3% 4.1%;
-    --primary: 27 87% 55%;
+    --primary: 27 87% 45%;
     --primary-foreground: 0 0% 98%;
-    --secondary: 24 10% 95%;
+    --secondary: 24 10% 90%;
     --secondary-foreground: 24 9.8% 10%;
     --muted: 24 10% 95%;
     --muted-foreground: 24 5.4% 63.9%;
@@ -22,32 +22,32 @@
     --destructive-foreground: 60 9.1% 97.8%;
     --border: 24 5.9% 90%;
     --input: 24 5.9% 90%;
-    --ring: 27 87% 55%;
+    --ring: 27 87% 45%;
     --radius: 0.5rem;
   }
 
   .theme-violet {
     --background: 259 30% 98%;
-    --primary: 259 63% 50%;
-    --ring: 259 63% 50%;
+    --primary: 259 63% 40%;
+    --ring: 259 63% 40%;
     --accent: 259 30% 92%;
-    --secondary: 259 30% 95%;
+    --secondary: 259 30% 90%;
   }
 
   .theme-indigo {
     --background: 238 40% 98%;
-    --primary: 238 82% 52%;
-    --ring: 238 82% 52%;
+    --primary: 238 82% 42%;
+    --ring: 238 82% 42%;
     --accent: 238 40% 92%;
-    --secondary: 238 40% 95%;
+    --secondary: 238 40% 90%;
   }
 
   .theme-rose {
     --background: 343 40% 98%;
-    --primary: 343 80% 45%;
-    --ring: 343 80% 45%;
+    --primary: 343 80% 35%;
+    --ring: 343 80% 35%;
     --accent: 343 40% 92%;
-    --secondary: 343 40% 95%;
+    --secondary: 343 40% 90%;
   }
 
   .dark {
@@ -57,9 +57,9 @@
     --card-foreground: 60 9.1% 97.8%;
     --popover: 20 14.3% 4.1%;
     --popover-foreground: 60 9.1% 97.8%;
-    --primary: 27 87% 55%;
+    --primary: 27 87% 45%;
     --primary-foreground: 0 0% 98%;
-    --secondary: 12 6.5% 15.1%;
+    --secondary: 12 6.5% 20%;
     --secondary-foreground: 60 9.1% 97.8%;
     --muted: 12 6.5% 15.1%;
     --muted-foreground: 24 5.4% 63.9%;
@@ -69,22 +69,22 @@
     --destructive-foreground: 60 9.1% 97.8%;
     --border: 12 6.5% 15.1%;
     --input: 12 6.5% 15.1%;
-    --ring: 27 87% 55%;
+    --ring: 27 87% 45%;
   }
 
   .dark.theme-violet {
-    --primary: 259 63% 55%;
-    --ring: 259 63% 55%;
+    --primary: 259 63% 50%;
+    --ring: 259 63% 50%;
   }
 
   .dark.theme-indigo {
-    --primary: 238 82% 58%;
-    --ring: 238 82% 58%;
+    --primary: 238 82% 52%;
+    --ring: 238 82% 52%;
   }
 
   .dark.theme-rose {
-    --primary: 343 80% 50%;
-    --ring: 343 80% 50%;
+    --primary: 343 80% 45%;
+    --ring: 343 80% 45%;
   }
 }
 
@@ -98,7 +98,8 @@
 }
 
 @layer components {
-  .btn-primary::before {
+  .btn-primary::before,
+  .btn-secondary::before {
     content: "";
     @apply absolute inset-0 bg-gradient-to-b from-white/20 to-transparent;
   }
