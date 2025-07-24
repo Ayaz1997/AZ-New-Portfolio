@@ -151,7 +151,7 @@ export default function ProjectsPage() {
                   
                   <div className="mt-6 flex flex-wrap items-center gap-4">
                     <Badge variant="secondary">{project.type}</Badge>
-                    <Badge variant={project.status === 'Ongoing' ? "outline" : "outline"} className={`flex items-center ${project.status === 'Ongoing' ? 'border-none bg-transparent text-green-500' : ''}`}>
+                    <Badge variant={project.status === 'Ongoing' ? "outline" : "secondary"} className={`flex items-center ${project.status === 'Ongoing' ? 'border-none bg-transparent text-green-500' : ''}`}>
                       {statusIcons[project.status]}
                       {project.status}
                     </Badge>
