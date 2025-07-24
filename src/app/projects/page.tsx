@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import Link from "next/link";
 import { Header } from "@/components/layout/header";
@@ -32,7 +33,7 @@ const projects: Project[] = [
   {
     name: "Creately - Web Builder",
     description: "A powerful and intuitive web builder designed to create stunning websites with ease. Features a drag-and-drop interface and a rich component library.",
-    imageUrl: "https://placehold.co/600x400.png",
+    imageUrl: "https://placehold.co/800x600.png",
     imageHint: "website builder interface",
     type: "Product",
     status: "Launched",
@@ -53,7 +54,7 @@ const projects: Project[] = [
   {
     name: "Socive - Social Media Analytics",
     description: "A comprehensive dashboard to track social media engagement, performance, and audience growth across multiple platforms.",
-    imageUrl: "https://placehold.co/600x400.png",
+    imageUrl: "https://placehold.co/800x600.png",
     imageHint: "analytics dashboard chart",
     type: "Client Project",
     status: "Ongoing",
@@ -64,7 +65,7 @@ const projects: Project[] = [
   {
     name: "Akaru - Creative Studio",
     description: "A branding and design project for a creative studio, including logo design, brand guidelines, and a portfolio website.",
-    imageUrl: "https://placehold.co/600x400.png",
+    imageUrl: "https://placehold.co/800x600.png",
     imageHint: "design studio logo",
     type: "Client Project",
     status: "Past work",
@@ -80,7 +81,7 @@ const projects: Project[] = [
   {
     name: "Mailorant - Smart Inbox",
     description: "An intelligent email client that organizes your inbox, prioritizes important messages, and helps you stay on top of your communication.",
-    imageUrl: "https://placehold.co/600x400.png",
+    imageUrl: "https://placehold.co/800x600.png",
     imageHint: "email application interface",
     type: "Side-Project",
     status: "Paused",
@@ -91,7 +92,7 @@ const projects: Project[] = [
   {
     name: "Innovatech - Startup Platform",
     description: "A platform for early-stage startups to connect with investors, mentors, and resources to accelerate their growth.",
-    imageUrl: "https://placehold.co/600x400.png",
+    imageUrl: "https://placehold.co/800x600.png",
     imageHint: "startup networking event",
     type: "Startup",
     status: "Launched",
