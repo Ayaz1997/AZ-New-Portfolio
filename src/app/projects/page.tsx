@@ -4,7 +4,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, CircleDot, PauseCircle, Rocket, User, ArrowRight } from "lucide-react";
+import { Calendar, CircleDot, PauseCircle, Rocket, User, ArrowRight, Sparkle, Lightbulb } from "lucide-react";
 
 type ProjectType = "Product" | "Side-Project" | "Client Project" | "Startup";
 type ProjectStatus = "Ongoing" | "Past work" | "Paused" | "Launched";
@@ -21,6 +21,11 @@ interface Project {
   role: ProjectRole;
   caseStudyUrl?: string;
   projectUrl: string;
+  highlights?: string[];
+  quickWin?: {
+    title: string;
+    text: string;
+  };
 }
 
 const projects: Project[] = [
@@ -35,6 +40,15 @@ const projects: Project[] = [
     role: "Product Designer",
     caseStudyUrl: "#",
     projectUrl: "#",
+    highlights: [
+      "Validated the idea with a tweet which got 100+ responses.",
+      "Shipped an early access landing page to start collecting interest.",
+      "Other roles involve marketing the project through Twitter, Reddit, and other online communities.",
+    ],
+    quickWin: {
+      title: "Random Fact",
+      text: "I immediately bought the domain for the project when I first saw the beta announcement for Framer Sites. I had a sense that folks at Framer are building something amazing.",
+    },
   },
   {
     name: "Socive - Social Media Analytics",
@@ -58,6 +72,10 @@ const projects: Project[] = [
     role: "Product Designer",
     caseStudyUrl: "#",
     projectUrl: "#",
+    quickWin: {
+      title: "Impact",
+      text: "The new branding and website led to a 40% increase in client inquiries within the first two months of launch.",
+    },
   },
   {
     name: "Mailorant - Smart Inbox",
@@ -108,7 +126,7 @@ export default function ProjectsPage() {
 
           <div className="mt-16 space-y-24">
             {projects.map((project, index) => (
-              <div key={index} className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+              <div key={index} className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
                 <div className="w-full h-auto p-2 bg-secondary rounded-xl">
                   <Image
                     src={project.imageUrl}
@@ -143,6 +161,29 @@ export default function ProjectsPage() {
                       <span>{project.role}</span>
                     </div>
                   </div>
+                  
+                  {project.highlights && (
+                    <div className="mt-8 space-y-4">
+                      {project.highlights.map((highlight, i) => (
+                        <div key={i} className="flex items-start gap-3">
+                          <Sparkle className="w-4 h-4 mt-1 flex-shrink-0 text-primary" />
+                          <p className="text-muted-foreground">{highlight}</p>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  {project.quickWin && (
+                    <div className="mt-8 bg-accent/50 rounded-lg p-4">
+                      <div className="flex items-start gap-3">
+                         <Lightbulb className="w-4 h-4 mt-1 flex-shrink-0 text-primary" />
+                         <div>
+                            <span className="font-bold text-foreground">{project.quickWin.title}: </span>
+                            <span className="text-muted-foreground">{project.quickWin.text}</span>
+                         </div>
+                      </div>
+                    </div>
+                  )}
 
                   <div className="mt-8 flex items-center gap-4">
                     {project.caseStudyUrl && (
