@@ -12,13 +12,18 @@ import { ThemeToggle } from '@/components/theme-toggle';
 export function Header() {
   const navItems = [
     { name: 'home', href: '/' },
+    { name: 'experience', href: '/#experience' },
     { name: 'projects', href: '/projects' },
-    { name: 'experience', href: '#' },
   ];
 
   const pathname = usePathname();
 
   const isActive = (href: string) => {
+    // For homepage, exact match. For others, check if path starts with href.
+    // For anchor links on the homepage, we also want to consider them "active" if on the homepage.
+    if (pathname === '/') {
+      return href === '/' || href.startsWith('/#');
+    }
     if (href === '/') return pathname === '/';
     return pathname.startsWith(href);
   };

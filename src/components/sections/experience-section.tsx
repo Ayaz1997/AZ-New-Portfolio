@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
@@ -74,7 +75,7 @@ const experiences = [
 
 export function ExperienceSection() {
   return (
-    <section className="container mx-auto py-10 md:py-24 px-4">
+    <section id="experience" className="container mx-auto py-10 md:py-24 px-4">
       <div className="text-center max-w-4xl mx-auto">
         <h2 className="font-headline text-4xl md:text-6xl font-bold text-foreground">
           Work Experience
