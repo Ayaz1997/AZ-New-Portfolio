@@ -106,10 +106,10 @@ export default function ProjectsPage() {
             </p>
           </div>
 
-          <div className="mt-16 space-y-16">
+          <div className="mt-16 space-y-24">
             {projects.map((project, index) => (
-              <div key={index} className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-                <div className="w-full h-auto p-2 border-4 border-foreground rounded-xl">
+              <div key={index} className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+                <div className="w-full h-auto p-2 bg-secondary rounded-xl">
                   <Image
                     src={project.imageUrl}
                     alt={project.name}
@@ -120,12 +120,14 @@ export default function ProjectsPage() {
                   />
                 </div>
                 <div className="flex flex-col">
-                  <h2 className="text-2xl md:text-3xl font-bold font-headline text-foreground">{project.name}</h2>
-                  <p className="mt-2 text-muted-foreground">{project.description}</p>
+                  <h2 className="text-2xl md:text-3xl font-bold font-headline text-foreground">
+                    {project.name}
+                    <span className="text-muted-foreground font-body font-normal text-lg md:text-xl ml-2">— {project.description}</span>
+                  </h2>
                   
-                  <div className="mt-6 flex flex-wrap items-center gap-2">
-                    <Badge variant="outline">{project.type}</Badge>
-                    <Badge variant="secondary" className="flex items-center">
+                  <div className="mt-6 flex flex-wrap items-center gap-4">
+                    <Badge variant="secondary">{project.type}</Badge>
+                    <Badge variant="outline" className="flex items-center">
                       {statusIcons[project.status]}
                       {project.status}
                     </Badge>
