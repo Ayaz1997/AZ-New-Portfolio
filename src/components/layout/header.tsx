@@ -36,26 +36,13 @@ export function Header() {
 
 
   const isActive = (href: string) => {
-    // Never highlight the experience link
-    if (href === '/#experience') {
-      return false;
-    }
-
-    const isAnchorLink = href.startsWith('/#');
-    
-    if (isAnchorLink) {
-      // Only highlight anchor links if the hash matches
-      return hash === href.substring(1);
-    }
-    
-    // For the home page, we want an exact match and no hash.
     if (href === '/') {
-      return pathname === '/' && !hash;
+        return pathname === '/' || pathname.startsWith('/#');
     }
-    
-    // For other pages, we check if the pathname starts with the href.
-    // This is useful for nested routes.
-    return pathname.startsWith(href);
+    if (href === '/projects') {
+        return pathname.startsWith(href);
+    }
+    return false;
   };
 
   return (
