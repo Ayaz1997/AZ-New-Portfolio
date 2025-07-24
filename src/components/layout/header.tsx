@@ -1,6 +1,7 @@
 
 'use client';
 
+import * as React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
@@ -17,14 +18,38 @@ export function Header() {
   ];
 
   const pathname = usePathname();
+  const [hash, setHash] = React.useState('');
+
+  React.useEffect(() => {
+    const onHashChange = () => {
+      setHash(window.location.hash);
+    };
+
+    // Set initial hash
+    onHashChange();
+
+    window.addEventListener('hashchange', onHashChange);
+    return () => {
+      window.removeEventListener('hashchange', onHashChange);
+    };
+  }, []);
+
 
   const isActive = (href: string) => {
-    // For homepage, exact match. For others, check if path starts with href.
-    // For anchor links on the homepage, we also want to consider them "active" if on the homepage.
-    if (pathname === '/') {
-      return href === '/' || href.startsWith('/#');
+    const isAnchorLink = href.startsWith('/#');
+    
+    if (isAnchorLink) {
+      // Only highlight anchor links if the hash matches
+      return hash === href.substring(1);
     }
-    if (href === '/') return pathname === '/';
+    
+    // For the home page, we want an exact match and no hash.
+    if (href === '/') {
+      return pathname === '/' && !hash;
+    }
+    
+    // For other pages, we check if the pathname starts with the href.
+    // This is useful for nested routes.
     return pathname.startsWith(href);
   };
 
