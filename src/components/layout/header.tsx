@@ -8,7 +8,7 @@ import { ThemeToggle } from '@/components/theme-toggle';
 export function Header() {
   const navItems = [
     { name: 'home', href: '/' },
-    { name: 'projects', href: '#' },
+    { name: 'projects', href: '/projects' },
     { name: 'experience', href: '#' },
   ];
 

@@ -54,7 +54,7 @@ export function PortfolioSection() {
             <div key={index} className="group">
               <Card 
                 className={cn(
-                  `rounded-2xl border shadow-lg dark:shadow-primary/10 transition-transform duration-300 ease-in-out group-hover:scale-105`,
+                  `rounded-2xl border bg-card shadow-lg dark:shadow-primary/10 transition-transform duration-300 ease-in-out group-hover:scale-105`,
                   index % 2 === 0 ? "group-hover:rotate-2" : "group-hover:-rotate-2"
                 )}
               >
@@ -84,7 +84,7 @@ export function PortfolioSection() {
       </div>
 
       <div className="mt-16 text-center">
-        <Link href="#">
+        <Link href="/projects">
           <Button variant="outline" size="lg">
             View all projects
             <ArrowRight className="ml-2 h-4 w-4" />
