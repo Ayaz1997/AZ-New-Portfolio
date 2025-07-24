@@ -111,9 +111,9 @@ const statusIcons = {
       <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
     </span>
   ),
-  "Past work": <Folder className="mr-1.5 h-3.5 w-3.5 text-gray-500" />,
-  "Paused": <PauseCircle className="mr-1.5 h-3.5 w-3.5 text-yellow-500" />,
-  "Launched": <Rocket className="mr-1.5 h-3.5 w-3.5 text-green-500" />,
+  "Past work": <Folder className="mr-1.5 h-3.5 w-3.5" />,
+  "Paused": <PauseCircle className="mr-1.5 h-3.5 w-3.5" />,
+  "Launched": <Rocket className="mr-1.5 h-3.5 w-3.5" />,
 };
 
 const typeColorMap: Record<ProjectType, string> = {
