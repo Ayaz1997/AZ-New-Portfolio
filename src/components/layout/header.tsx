@@ -36,6 +36,11 @@ export function Header() {
 
 
   const isActive = (href: string) => {
+    // Never highlight the experience link
+    if (href === '/#experience') {
+      return false;
+    }
+
     const isAnchorLink = href.startsWith('/#');
     
     if (isAnchorLink) {
