@@ -1,4 +1,8 @@
+
+'use client';
+
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { DoodleCircle } from '@/components/icons/doodle-circle';
 import { Menu, MessageCircle } from 'lucide-react';
@@ -12,7 +16,12 @@ export function Header() {
     { name: 'experience', href: '#' },
   ];
 
-  const activePath = 'home';
+  const pathname = usePathname();
+
+  const isActive = (href: string) => {
+    if (href === '/') return pathname === '/';
+    return pathname.startsWith(href);
+  };
 
   return (
     <header className="py-6 px-4 md:px-16">
@@ -27,7 +36,7 @@ export function Header() {
               href={item.href}
               className="capitalize text-lg text-muted-foreground hover:text-primary transition-colors relative"
             >
-              {item.name === activePath && (
+              {isActive(item.href) && (
                 <DoodleCircle className="absolute -top-2 -left-4 w-[70px] h-10 text-primary" />
               )}
               <span className="relative z-10">{item.name}</span>
@@ -56,7 +65,7 @@ export function Header() {
                     href={item.href}
                     className="capitalize text-2xl text-muted-foreground hover:text-primary transition-colors relative"
                   >
-                     {item.name === activePath && (
+                     {isActive(item.href) && (
                       <DoodleCircle className="absolute -top-2 -left-4 w-[80px] h-12 text-primary" />
                     )}
                     <span className="relative z-10">{item.name}</span>
