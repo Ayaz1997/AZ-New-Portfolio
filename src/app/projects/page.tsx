@@ -54,7 +54,7 @@ const projects: Project[] = [
   {
     name: "Socive - Social Media Analytics",
     description: "A comprehensive dashboard to track social media engagement, performance, and audience growth across multiple platforms.",
-    imageUrl: "https://placehold.co/800x600.png",
+    imageUrl: "https://placehold.co/800x550.png",
     imageHint: "analytics dashboard chart",
     type: "Client Project",
     status: "Ongoing",
@@ -65,7 +65,7 @@ const projects: Project[] = [
   {
     name: "Akaru - Creative Studio",
     description: "A branding and design project for a creative studio, including logo design, brand guidelines, and a portfolio website.",
-    imageUrl: "https://placehold.co/800x600.png",
+    imageUrl: "https://placehold.co/800x650.png",
     imageHint: "design studio logo",
     type: "Client Project",
     status: "Past work",
@@ -81,7 +81,7 @@ const projects: Project[] = [
   {
     name: "Mailorant - Smart Inbox",
     description: "An intelligent email client that organizes your inbox, prioritizes important messages, and helps you stay on top of your communication.",
-    imageUrl: "https://placehold.co/800x600.png",
+    imageUrl: "https://placehold.co/800x700.png",
     imageHint: "email application interface",
     type: "Side-Project",
     status: "Paused",
@@ -92,7 +92,7 @@ const projects: Project[] = [
   {
     name: "Innovatech - Startup Platform",
     description: "A platform for early-stage startups to connect with investors, mentors, and resources to accelerate their growth.",
-    imageUrl: "https://placehold.co/800x600.png",
+    imageUrl: "https://placehold.co/800x500.png",
     imageHint: "startup networking event",
     type: "Startup",
     status: "Launched",
@@ -132,8 +132,8 @@ export default function ProjectsPage() {
                   <Image
                     src={project.imageUrl}
                     alt={project.name}
-                    width={600}
-                    height={400}
+                    width={800}
+                    height={600}
                     className="w-full h-auto rounded-lg"
                     data-ai-hint={project.imageHint}
                   />
