@@ -119,7 +119,7 @@ const statusIcons = {
 const typeColorMap: Record<ProjectType, string> = {
   "Product": "bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-300",
   "Side-Project": "bg-purple-100 text-purple-800 dark:bg-purple-900/50 dark:text-purple-300",
-  "Client Project": "bg-rose-100 text-rose-800 dark:bg-rose-900/50 dark:text-rose-300",
+  "Client Project": "bg-green-100 text-green-800 dark:bg-green-900/50 dark:text-green-300",
   "Startup": "bg-amber-100 text-amber-800 dark:bg-amber-900/50 dark:text-amber-300",
 };
 
