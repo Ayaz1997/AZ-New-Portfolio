@@ -5,7 +5,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, CircleDot, PauseCircle, Rocket, User, ArrowRight, Sparkle, Lightbulb } from "lucide-react";
+import { Calendar, Folder, PauseCircle, Rocket, User, ArrowRight, Sparkle, Lightbulb } from "lucide-react";
 
 type ProjectType = "Product" | "Side-Project" | "Client Project" | "Startup";
 type ProjectStatus = "Ongoing" | "Past work" | "Paused" | "Launched";
@@ -104,8 +104,13 @@ const projects: Project[] = [
 ];
 
 const statusIcons = {
-  "Ongoing": <CircleDot className="mr-1.5 h-3.5 w-3.5 text-blue-500" />,
-  "Past work": <CircleDot className="mr-1.5 h-3.5 w-3.5 text-gray-500" />,
+    "Ongoing": (
+    <span className="relative flex h-3 w-3 mr-1.5">
+      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+      <span className="relative inline-flex rounded-full h-3 w-3 bg-blue-500"></span>
+    </span>
+  ),
+  "Past work": <Folder className="mr-1.5 h-3.5 w-3.5 text-gray-500" />,
   "Paused": <PauseCircle className="mr-1.5 h-3.5 w-3.5 text-yellow-500" />,
   "Launched": <Rocket className="mr-1.5 h-3.5 w-3.5 text-green-500" />,
 };
