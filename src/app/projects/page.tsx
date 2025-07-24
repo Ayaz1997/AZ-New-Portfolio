@@ -34,7 +34,7 @@ const projects: Project[] = [
   {
     name: "Creately - Web Builder",
     description: "A powerful and intuitive web builder designed to create stunning websites with ease. Features a drag-and-drop interface and a rich component library.",
-    imageUrl: "https://placehold.co/800x600.png",
+    imageUrl: "https://placehold.co/800x700.png",
     imageHint: "website builder interface",
     type: "Product",
     status: "Launched",
@@ -55,7 +55,7 @@ const projects: Project[] = [
   {
     name: "Socive - Social Media Analytics",
     description: "A comprehensive dashboard to track social media engagement, performance, and audience growth across multiple platforms.",
-    imageUrl: "https://placehold.co/800x550.png",
+    imageUrl: "https://placehold.co/800x700.png",
     imageHint: "analytics dashboard chart",
     type: "Client Project",
     status: "Ongoing",
@@ -66,7 +66,7 @@ const projects: Project[] = [
   {
     name: "Akaru - Creative Studio",
     description: "A branding and design project for a creative studio, including logo design, brand guidelines, and a portfolio website.",
-    imageUrl: "https://placehold.co/800x650.png",
+    imageUrl: "https://placehold.co/800x700.png",
     imageHint: "design studio logo",
     type: "Client Project",
     status: "Past work",
@@ -93,7 +93,7 @@ const projects: Project[] = [
   {
     name: "Innovatech - Startup Platform",
     description: "A platform for early-stage startups to connect with investors, mentors, and resources to accelerate their growth.",
-    imageUrl: "https://placehold.co/800x500.png",
+    imageUrl: "https://placehold.co/800x700.png",
     imageHint: "startup networking event",
     type: "Startup",
     status: "Launched",
@@ -147,7 +147,7 @@ export default function ProjectsPage() {
                     src={project.imageUrl}
                     alt={project.name}
                     width={800}
-                    height={600}
+                    height={700}
                     className="w-full h-auto rounded-lg"
                     data-ai-hint={project.imageHint}
                   />
@@ -159,7 +159,7 @@ export default function ProjectsPage() {
                   </h2>
                   
                   <div className="mt-6 flex flex-wrap items-center gap-4">
-                    <Badge className={cn("border-transparent", typeColorMap[project.type])}>{project.type}</Badge>
+                    <Badge className={cn("border-transparent hover:bg-opacity-80", typeColorMap[project.type])}>{project.type}</Badge>
                     <Badge
                       className={cn(
                         "flex items-center",
