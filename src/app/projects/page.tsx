@@ -6,6 +6,7 @@ import { Footer } from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Folder, PauseCircle, Rocket, User, ArrowRight, Sparkle, Lightbulb } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 type ProjectType = "Product" | "Side-Project" | "Client Project" | "Startup";
 type ProjectStatus = "Ongoing" | "Past work" | "Paused" | "Launched";
@@ -115,6 +116,14 @@ const statusIcons = {
   "Launched": <Rocket className="mr-1.5 h-3.5 w-3.5 text-green-500" />,
 };
 
+const typeColorMap: Record<ProjectType, string> = {
+  "Product": "bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-300",
+  "Side-Project": "bg-purple-100 text-purple-800 dark:bg-purple-900/50 dark:text-purple-300",
+  "Client Project": "bg-rose-100 text-rose-800 dark:bg-rose-900/50 dark:text-rose-300",
+  "Startup": "bg-amber-100 text-amber-800 dark:bg-amber-900/50 dark:text-amber-300",
+};
+
+
 export default function ProjectsPage() {
   return (
     <div className="flex flex-col min-h-screen bg-background font-body">
@@ -150,8 +159,18 @@ export default function ProjectsPage() {
                   </h2>
                   
                   <div className="mt-6 flex flex-wrap items-center gap-4">
-                    <Badge variant="secondary">{project.type}</Badge>
-                    <Badge variant={project.status === 'Ongoing' ? "default" : "secondary"} className={`flex items-center ${project.status === 'Ongoing' ? 'border-none bg-transparent text-green-500' : ''}`}>
+                    <Badge className={cn("border-transparent", typeColorMap[project.type])}>{project.type}</Badge>
+                    <Badge
+                      className={cn(
+                        "flex items-center",
+                        project.status === "Ongoing"
+                          ? "bg-transparent text-green-500 border-none"
+                          : ""
+                      )}
+                      variant={
+                        project.status !== "Ongoing" ? "secondary" : "default"
+                      }
+                    >
                       {statusIcons[project.status]}
                       {project.status}
                     </Badge>
