@@ -105,9 +105,9 @@ const projects: Project[] = [
 
 const statusIcons = {
     "Ongoing": (
-    <span className="relative flex h-2.5 w-2.5 mr-1.5">
-      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary/75"></span>
-      <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary"></span>
+    <span className="relative flex h-2 w-2 mr-1.5">
+      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+      <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
     </span>
   ),
   "Past work": <Folder className="mr-1.5 h-3.5 w-3.5 text-gray-500" />,
@@ -151,7 +151,7 @@ export default function ProjectsPage() {
                   
                   <div className="mt-6 flex flex-wrap items-center gap-4">
                     <Badge variant="secondary">{project.type}</Badge>
-                    <Badge variant={project.status === 'Ongoing' ? 'secondary' : 'outline'} className="flex items-center">
+                    <Badge variant={project.status === 'Ongoing' ? 'secondary' : 'outline'} className={`flex items-center ${project.status === 'Ongoing' ? 'border-none' : ''}`}>
                       {statusIcons[project.status]}
                       {project.status}
                     </Badge>
