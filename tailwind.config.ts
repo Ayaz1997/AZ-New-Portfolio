@@ -11,7 +11,7 @@ export default {
     extend: {
       fontFamily: {
         body: ['Inter', 'sans-serif'],
-        headline: ['Cormorant Garamond', 'serif'],
+        headline: ['"Instrument Serif"', 'serif'],
         caption: ['Caveat', 'cursive'],
         code: ['monospace'],
       },
