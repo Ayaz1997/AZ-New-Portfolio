@@ -16,12 +16,12 @@ export function HeroSection() {
             className="rounded-2xl shadow-lg w-16 h-16 -rotate-3"
             data-ai-hint="man avatar"
           />
-          <h2 className="font-headline text-4xl md:text-7xl font-bold text-foreground">
+          <h2 className="font-headline text-4xl md:text-7xl font-medium text-foreground">
             Hello! I'm Ayaz
           </h2>
         </div>
         
-        <h1 className="font-headline text-3xl md:text-7xl font-medium text-foreground mt-8 leading-tight">
+        <h1 className="font-headline text-3xl md:text-7xl font-normal text-foreground mt-8 leading-tight">
           I Design Intuitive Digital Products With A
           <span className="inline-flex align-middle mx-2">
             <StickyNoteIcon className="h-10 w-10 md:h-16 md:w-16 -rotate-6 text-yellow-300" />
