@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Download, MessageCircle, Linkedin, Dribbble, X } from "lucide-react";
+import { Download, MessageCircle, Linkedin, Dribbble, Twitter } from "lucide-react";
 import { StickyNoteIcon } from "@/components/icons/sticky-note";
 
 export function HeroSection() {
@@ -49,7 +49,7 @@ export function HeroSection() {
                 <Dribbble className="h-6 w-6 text-foreground" />
              </Button>
              <Button variant="outline" size="icon" className="rounded-lg bg-card shadow-sm hover:shadow-md transition-shadow">
-                <X className="h-5 w-5 text-foreground" />
+                <Twitter className="h-5 w-5 text-foreground" />
              </Button>
           </div>
         </div>
