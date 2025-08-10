@@ -131,7 +131,7 @@ export default function ProjectsPage() {
       <main className="flex-1 py-10 md:py-24">
         <div className="container mx-auto px-4 md:px-16">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="font-headline text-4xl md:text-6xl font-bold text-foreground">
+            <h1 className="font-headline text-4xl md:text-6xl font-normal text-foreground">
               My Proof of Work!
             </h1>
             <p className="mt-4 text-lg md:text-xl text-muted-foreground leading-relaxed">
@@ -159,7 +159,7 @@ export default function ProjectsPage() {
                   </h2>
                   
                   <div className="mt-6 flex flex-wrap items-center gap-4">
-                    <Badge className={cn("border-transparent hover:bg-opacity-80", typeColorMap[project.type])}>{project.type}</Badge>
+                    <Badge className={cn("border-transparent", typeColorMap[project.type])}>{project.type}</Badge>
                     <Badge
                       className={cn(
                         "flex items-center",

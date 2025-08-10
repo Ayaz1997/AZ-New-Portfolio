@@ -9,7 +9,7 @@ export function CtaSection() {
         <Card className="border">
           <CardContent className="p-10 md:p-16">
             <div className="text-center">
-              <h2 className="font-headline text-3xl md:text-5xl font-bold text-foreground">
+              <h2 className="font-headline text-3xl md:text-5xl font-normal text-foreground">
                 Let's level up your product together
               </h2>
               <p className="mt-4 mb-8 text-lg text-muted-foreground max-w-2xl mx-auto">

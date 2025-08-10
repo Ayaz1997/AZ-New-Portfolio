@@ -40,7 +40,7 @@ export function PortfolioSection() {
   return (
     <section className="container mx-auto py-10 md:py-24 px-4">
       <div className="text-center max-w-4xl mx-auto">
-        <h2 className="font-headline text-4xl md:text-6xl font-bold text-foreground">
+        <h2 className="font-headline text-4xl md:text-6xl font-normal text-foreground">
           My Portfolio
         </h2>
         <p className="mt-4 text-lg md:text-xl text-muted-foreground leading-relaxed">

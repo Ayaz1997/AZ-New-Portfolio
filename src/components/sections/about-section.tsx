@@ -5,7 +5,7 @@ export function AboutSection() {
   return (
     <section className="container mx-auto py-10 md:py-24 px-4 md:px-16">
       <div className="text-center max-w-4xl mx-auto">
-        <h2 className="font-headline text-4xl md:text-6xl font-bold text-foreground">
+        <h2 className="font-headline text-4xl md:text-6xl font-normal text-foreground">
           About Me
         </h2>
         <p className="mt-8 text-lg md:text-2xl text-muted-foreground leading-relaxed">
