@@ -43,8 +43,8 @@ export function AboutSection() {
                <Image
                   src={image.src}
                   alt={image.alt}
-                  width={400}
-                  height={267}
+                  width={300}
+                  height={374}
                   className="w-full h-auto rounded-lg object-cover bg-muted"
                 />
             </div>
