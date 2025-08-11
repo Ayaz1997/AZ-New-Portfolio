@@ -3,23 +3,23 @@ import Image from "next/image";
 
 const stampImages = [
   {
-    src: "/image-1.png",
+    src: "/postcard-1.png",
     alt: "Placeholder image 1",
   },
   {
-    src: "/image-2.png",
+    src: "/postcard-2.png",
     alt: "Placeholder image 2",
   },
   {
-    src: "/image-3.png",
+    src: "/postcard-3.png",
     alt: "Placeholder image 3",
   },
   {
-    src: "/image-4.png",
+    src: "/postcard-4.png",
     alt: "Placeholder image 4",
   },
   {
-    src: "/image-5.png",
+    src: "/postcard-5.png",
     alt: "Placeholder image 5",
   }
 ];
@@ -37,7 +37,7 @@ export function AboutSection() {
       </div>
 
       <div className="mt-20 md:mt-24">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 justify-center">
           {stampImages.map((image, index) => (
             <div key={index}>
                <Image
