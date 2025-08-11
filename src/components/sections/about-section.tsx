@@ -1,6 +1,34 @@
 
 import Image from "next/image";
 
+const stampImages = [
+  {
+    src: "https://placehold.co/400x267.png",
+    alt: "Creately Landingpage",
+    hint: "website screenshot",
+  },
+  {
+    src: "https://placehold.co/400x267.png",
+    alt: "Mailorant Landingpage",
+    hint: "website screenshot",
+  },
+  {
+    src: "https://placehold.co/400x267.png",
+    alt: "Optitask Landingpage",
+    hint: "dashboard analytics",
+  },
+  {
+    src: "https://placehold.co/400x267.png",
+    alt: "New Project",
+    hint: "wireframe sketch",
+  },
+  {
+    src: "https://placehold.co/400x267.png",
+    alt: "Another project",
+    hint: "mobile application",
+  }
+];
+
 export function AboutSection() {
   return (
     <section className="container mx-auto py-10 md:py-24 px-4 md:px-16">
@@ -13,61 +41,25 @@ export function AboutSection() {
         </p>
       </div>
 
-      <div className="mt-20 md:mt-24 relative max-w-2xl mx-auto h-[450px] md:h-[400px]">
-        {/* Image 1: Creately - Polaroid */}
-        <div className="absolute top-0 -left-4 sm:left-0 w-[180px] md:w-[250px] z-10 group transition-transform duration-300 ease-in-out hover:scale-110 hover:z-40">
-          <div className="bg-card p-3 pb-8 border rounded-lg shadow-2xl -rotate-12 dark:border-muted group-hover:rotate-0">
-            <Image
-              src="https://placehold.co/400x267.png"
-              alt="Creately Landingpage"
-              width={250}
-              height={167}
-              className="rounded-sm"
-              data-ai-hint="website screenshot"
-            />
-          </div>
-        </div>
-
-        {/* Image 2: Mailorant - Polaroid */}
-        <div className="absolute top-32 right-0 sm:-right-8 w-[180px] md:w-[250px] z-20 group transition-transform duration-300 ease-in-out hover:scale-110 hover:z-40">
-           <div className="bg-card p-3 pb-8 border rounded-lg shadow-2xl rotate-12 dark:border-muted group-hover:rotate-0">
-            <Image
-              src="https://placehold.co/400x267.png"
-              alt="Mailorant Landingpage"
-              width={250}
-              height={167}
-              className="rounded-sm"
-              data-ai-hint="website screenshot"
-            />
-          </div>
-        </div>
-
-        {/* Image 3: Optitask - Polaroid */}
-        <div className="absolute bottom-16 -left-4 sm:left-8 w-[180px] md:w-[250px] z-30 group transition-transform duration-300 ease-in-out hover:scale-110 hover:z-40">
-           <div className="bg-card p-3 pb-8 border rounded-lg shadow-2xl rotate-6 dark:border-muted group-hover:rotate-0">
-            <Image
-              src="https://placehold.co/400x267.png"
-              alt="Optitask Landingpage"
-              width={250}
-              height={167}
-              className="rounded-sm"
-              data-ai-hint="dashboard analytics"
-            />
-          </div>
-        </div>
-        
-        {/* Image 4: New Project - Polaroid */}
-        <div className="absolute bottom-0 right-0 sm:right-8 w-[180px] md:w-[250px] z-20 group transition-transform duration-300 ease-in-out hover:scale-110 hover:z-40">
-           <div className="bg-card p-3 pb-8 border rounded-lg shadow-2xl -rotate-6 dark:border-muted group-hover:rotate-0">
-            <Image
-              src="https://placehold.co/400x267.png"
-              alt="New Project"
-              width={250}
-              height={167}
-              className="rounded-sm"
-              data-ai-hint="wireframe sketch"
-            />
-          </div>
+      <div className="mt-20 md:mt-24">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+          {stampImages.map((image, index) => (
+            <div
+              key={index}
+              className="stamp group transition-transform duration-300 ease-in-out hover:scale-110 hover:z-10"
+            >
+              <div className="bg-card p-2">
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  width={400}
+                  height={267}
+                  className="w-full h-auto rounded-sm object-cover"
+                  data-ai-hint={image.hint}
+                />
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

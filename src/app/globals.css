@@ -103,4 +103,30 @@
     content: "";
     @apply absolute inset-0 bg-gradient-to-b from-white/20 to-transparent;
   }
+
+  .stamp {
+    position: relative;
+    overflow: hidden;
+    background-color: hsl(var(--card));
+    padding: 1rem;
+    --mask: radial-gradient(
+        circle at 0 0,
+        #0000 10px,
+        transparent 0
+      ) 0 0/calc(100% - 10px) 100% no-repeat,
+      radial-gradient(circle at 100% 0, #0000 10px, transparent 0) 100% 0/10px
+        100% no-repeat,
+      radial-gradient(circle at 0 100%, #0000 10px, transparent 0) 0 100%/100%
+        10px no-repeat,
+      radial-gradient(
+        circle at 100% 100%,
+        #0000 10px,
+        transparent 0
+      )
+      100% 100%/0 0 no-repeat,
+      linear-gradient(#000, #000) 50% 50% / calc(100% - 20px)
+        calc(100% - 20px) no-repeat;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+  }
 }
