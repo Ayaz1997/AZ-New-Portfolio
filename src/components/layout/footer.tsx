@@ -32,22 +32,22 @@ export function Footer() {
 
         <div className="flex items-center gap-3 mt-8">
           <Link href="#" target="_blank" rel="noopener noreferrer">
-             <Button variant="outline" size="icon" className="rounded-lg bg-card shadow-sm hover:shadow-md transition-shadow">
+             <Button size="icon" className="rounded-md border border-[rgba(189,189,189,0.30)] bg-[#F8F8F8] bg-gradient-to-b from-[rgba(0,0,0,0.00)] to-[rgba(0,0,0,0.03)] shadow-[0_1.61px_4.025px_-0.805px_rgba(41,44,50,0.12)]">
                 <Linkedin className="h-6 w-6 text-foreground" />
              </Button>
           </Link>
            <Link href="#" target="_blank" rel="noopener noreferrer">
-             <Button variant="outline" size="icon" className="rounded-lg bg-card shadow-sm hover:shadow-md transition-shadow p-2.5">
+             <Button size="icon" className="rounded-md border border-[rgba(189,189,189,0.30)] bg-[#F8F8F8] bg-gradient-to-b from-[rgba(0,0,0,0.00)] to-[rgba(0,0,0,0.03)] shadow-[0_1.61px_4.025px_-0.805px_rgba(41,44,50,0.12)] p-2.5">
                 <XIcon className="h-5 w-5 text-foreground" />
              </Button>
           </Link>
           <Link href="#" target="_blank" rel="noopener noreferrer">
-             <Button variant="outline" size="icon" className="rounded-lg bg-card shadow-sm hover:shadow-md transition-shadow">
+             <Button size="icon" className="rounded-md border border-[rgba(189,189,189,0.30)] bg-[#F8F8F8] bg-gradient-to-b from-[rgba(0,0,0,0.00)] to-[rgba(0,0,0,0.03)] shadow-[0_1.61px_4.025px_-0.805px_rgba(41,44,50,0.12)]">
                 <Dribbble className="h-6 w-6 text-foreground" />
              </Button>
           </Link>
           <Link href="mailto:hey@ayaz.me">
-             <Button variant="outline" size="icon" className="rounded-lg bg-card shadow-sm hover:shadow-md transition-shadow">
+             <Button size="icon" className="rounded-md border border-[rgba(189,189,189,0.30)] bg-[#F8F8F8] bg-gradient-to-b from-[rgba(0,0,0,0.00)] to-[rgba(0,0,0,0.03)] shadow-[0_1.61px_4.025px_-0.805px_rgba(41,44,50,0.12)]">
                 <Mail className="h-6 w-6 text-foreground" />
              </Button>
           </Link>
