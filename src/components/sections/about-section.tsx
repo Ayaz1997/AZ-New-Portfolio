@@ -3,29 +3,24 @@ import Image from "next/image";
 
 const stampImages = [
   {
-    src: "https://placehold.co/400x267.png",
-    alt: "Creately Landingpage",
-    hint: "website screenshot",
+    src: "/image-1.png",
+    alt: "Placeholder image 1",
   },
   {
-    src: "https://placehold.co/400x267.png",
-    alt: "Mailorant Landingpage",
-    hint: "website screenshot",
+    src: "/image-2.png",
+    alt: "Placeholder image 2",
   },
   {
-    src: "https://placehold.co/400x267.png",
-    alt: "Optitask Landingpage",
-    hint: "dashboard analytics",
+    src: "/image-3.png",
+    alt: "Placeholder image 3",
   },
   {
-    src: "https://placehold.co/400x267.png",
-    alt: "New Project",
-    hint: "wireframe sketch",
+    src: "/image-4.png",
+    alt: "Placeholder image 4",
   },
   {
-    src: "https://placehold.co/400x267.png",
-    alt: "Another project",
-    hint: "mobile application",
+    src: "/image-5.png",
+    alt: "Placeholder image 5",
   }
 ];
 
@@ -44,20 +39,14 @@ export function AboutSection() {
       <div className="mt-20 md:mt-24">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
           {stampImages.map((image, index) => (
-            <div
-              key={index}
-              className="stamp group transition-transform duration-300 ease-in-out hover:scale-110 hover:z-10"
-            >
-              <div className="bg-card p-2">
-                <Image
+            <div key={index}>
+               <Image
                   src={image.src}
                   alt={image.alt}
                   width={400}
                   height={267}
-                  className="w-full h-auto rounded-sm object-cover"
-                  data-ai-hint={image.hint}
+                  className="w-full h-auto rounded-lg object-cover bg-muted"
                 />
-              </div>
             </div>
           ))}
         </div>
