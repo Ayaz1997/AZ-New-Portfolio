@@ -46,8 +46,7 @@ export function Header() {
   };
 
   return (
-    <header className="py-6 px-4 md:px-16">
-      <div className="container mx-auto flex items-center justify-between">
+    <header className="container mx-auto py-6 px-4 md:px-16 flex items-center justify-between">
         <Link href="/" className="font-headline text-3xl font-bold text-foreground">
           Ayaz.
         </Link>
@@ -100,7 +99,6 @@ export function Header() {
             </SheetContent>
           </Sheet>
         </div>
-      </div>
     </header>
   );
 }
