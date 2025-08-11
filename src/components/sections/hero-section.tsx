@@ -23,29 +23,31 @@ function XIcon(props: React.SVGProps<SVGSVGElement>) {
 export function HeroSection() {
   return (
     <section className="container mx-auto py-10 md:py-24 px-4 md:px-16">
-      <div className="max-w-4xl">
-        <div className="flex items-center gap-4">
-          <Image
-            src="/az-80.png"
-            alt="Ayaz's avatar"
-            width={80}
-            height={80}
-            className="rounded-2xl shadow-lg w-16 h-16 -rotate-3"
-            data-ai-hint="man avatar"
-          />
-          <h2 className="font-headline text-4xl md:text-7xl font-medium text-foreground">
-            Hello! I'm Ayaz
-          </h2>
+      <div>
+        <div className="max-w-4xl">
+          <div className="flex items-center gap-4">
+            <Image
+              src="/az-80.png"
+              alt="Ayaz's avatar"
+              width={80}
+              height={80}
+              className="rounded-2xl shadow-lg w-16 h-16 -rotate-3"
+              data-ai-hint="man avatar"
+            />
+            <h2 className="font-headline text-4xl md:text-7xl font-medium text-foreground">
+              Hello! I'm Ayaz
+            </h2>
+          </div>
+          
+          <h1 className="font-headline text-3xl md:text-7xl font-normal text-foreground mt-8 leading-tight">
+            I Design Intuitive Digital Products With A
+            <span className="inline-flex align-middle mx-2">
+              <StickyNoteIcon className="h-10 w-10 md:h-16 md:w-16 -rotate-6 text-yellow-300" />
+            </span>
+            Focus On <br className="hidden md:block" />
+            <span className="text-muted-foreground/50">Clarity, Empathy, And Precision.</span>
+          </h1>
         </div>
-        
-        <h1 className="font-headline text-3xl md:text-7xl font-normal text-foreground mt-8 leading-tight">
-          I Design Intuitive Digital Products With A
-          <span className="inline-flex align-middle mx-2">
-            <StickyNoteIcon className="h-10 w-10 md:h-16 md:w-16 -rotate-6 text-yellow-300" />
-          </span>
-          Focus On <br className="hidden md:block" />
-          <span className="text-muted-foreground/50">Clarity, Empathy, And Precision.</span>
-        </h1>
 
         <div className="mt-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <div className="flex flex-wrap items-center gap-4">
