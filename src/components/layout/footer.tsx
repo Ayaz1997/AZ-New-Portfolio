@@ -33,28 +33,28 @@ export function Footer() {
         <div className="flex items-center gap-3 mt-8">
           <Link href="#" target="_blank" rel="noopener noreferrer">
              <Button size="icon" className="rounded-md border border-[rgba(189,189,189,0.30)] bg-[#F8F8F8] bg-gradient-to-b from-[rgba(0,0,0,0.00)] to-[rgba(0,0,0,0.03)] shadow-[0_1.61px_4.025px_-0.805px_rgba(41,44,50,0.12)]">
-                <div className="w-8 h-8 flex items-center justify-center bg-white rounded-[4.83px] border-[0.3px] border-[#BDBDBD]">
+                <div className="w-8 h-8 flex items-center justify-center bg-white rounded-[4.83px] border border-border">
                     <Linkedin className="h-6 w-6 text-foreground" />
                 </div>
              </Button>
           </Link>
            <Link href="#" target="_blank" rel="noopener noreferrer">
-             <Button size="icon" className="rounded-md border border-[rgba(189,189,189,0.30)] bg-[#F8F8F8] bg-gradient-to-b from-[rgba(0,0,0,0.00)] to-[rgba(0,0,0,0.03)] shadow-[0_1.61px_4.025px_-0.805px_rgba(41,44,50,0.12)] p-2.5">
-                <div className="w-8 h-8 flex items-center justify-center bg-white rounded-[4.83px] border-[0.3px] border-[#BDBDBD]">
+             <Button size="icon" className="rounded-md border border-[rgba(189,189,189,0.30)] bg-[#F8F8F8] bg-gradient-to-b from-[rgba(0,0,0,0.00)] to-[rgba(0,0,0,0.03)] shadow-[0_1.61px_4.025px_-0.805px_rgba(41,44,50,0.12)]">
+                <div className="w-8 h-8 flex items-center justify-center bg-white rounded-[4.83px] border border-border">
                     <XIcon className="h-5 w-5 text-foreground" />
                 </div>
              </Button>
           </Link>
           <Link href="#" target="_blank" rel="noopener noreferrer">
              <Button size="icon" className="rounded-md border border-[rgba(189,189,189,0.30)] bg-[#F8F8F8] bg-gradient-to-b from-[rgba(0,0,0,0.00)] to-[rgba(0,0,0,0.03)] shadow-[0_1.61px_4.025px_-0.805px_rgba(41,44,50,0.12)]">
-                 <div className="w-8 h-8 flex items-center justify-center bg-white rounded-[4.83px] border-[0.3px] border-[#BDBDBD]">
+                 <div className="w-8 h-8 flex items-center justify-center bg-white rounded-[4.83px] border border-border">
                     <Dribbble className="h-6 w-6 text-foreground" />
                 </div>
              </Button>
           </Link>
           <Link href="mailto:hey@ayaz.me">
              <Button size="icon" className="rounded-md border border-[rgba(189,189,189,0.30)] bg-[#F8F8F8] bg-gradient-to-b from-[rgba(0,0,0,0.00)] to-[rgba(0,0,0,0.03)] shadow-[0_1.61px_4.025px_-0.805px_rgba(41,44,50,0.12)]">
-                <div className="w-8 h-8 flex items-center justify-center bg-white rounded-[4.83px] border-[0.3px] border-[#BDBDBD]">
+                <div className="w-8 h-8 flex items-center justify-center bg-white rounded-[4.83px] border border-border">
                     <Mail className="h-6 w-6 text-foreground" />
                 </div>
              </Button>
