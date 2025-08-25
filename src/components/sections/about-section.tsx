@@ -56,17 +56,17 @@ export function AboutSection() {
             <div className="grid grid-cols-3 justify-items-center">
               <motion.div style={{ x: picture1X, rotate: picture1Rotate, zIndex: 1 }} className="origin-center">
                   <div className="p-4 rounded-2xl border bg-card text-card-foreground shadow-lg">
-                    <Image src={cardImages[0].src} alt={cardImages[0].alt} width={400} height={498} className="w-full h-auto rounded-lg object-cover bg-muted" />
+                    <Image src={cardImages[0].src} alt={cardImages[0].alt} width={400} height={550} className="w-full h-auto rounded-lg object-cover bg-muted" />
                   </div>
               </motion.div>
               <motion.div style={{ scale, zIndex: 2 }} className="origin-center">
                   <div className="p-4 rounded-2xl border bg-card text-card-foreground shadow-lg">
-                    <Image src={cardImages[1].src} alt={cardImages[1].alt} width={400} height={498} className="w-full h-auto rounded-lg object-cover bg-muted" />
+                    <Image src={cardImages[1].src} alt={cardImages[1].alt} width={400} height={550} className="w-full h-auto rounded-lg object-cover bg-muted" />
                   </div>
               </motion.div>
               <motion.div style={{ x: picture3X, rotate: picture3Rotate, zIndex: 1 }} className="origin-center">
                   <div className="p-4 rounded-2xl border bg-card text-card-foreground shadow-lg">
-                    <Image src={cardImages[2].src} alt={cardImages[2].alt} width={400} height={498} className="w-full h-auto rounded-lg object-cover bg-muted" />
+                    <Image src={cardImages[2].src} alt={cardImages[2].alt} width={400} height={550} className="w-full h-auto rounded-lg object-cover bg-muted" />
                   </div>
               </motion.div>
             </div>
