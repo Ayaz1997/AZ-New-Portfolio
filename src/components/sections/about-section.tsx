@@ -14,9 +14,9 @@ const cardImages = [
 
 function useCardAnimation(scrollYProgress: MotionValue<number>) {
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.15]);
-  const picture1X = useTransform(scrollYProgress, [0, 1], ['0%', '-90%']);
+  const picture1X = useTransform(scrollYProgress, [0, 1], ['0%', '-60%']);
   const picture1Rotate = useTransform(scrollYProgress, [0, 1], [0, -8]);
-  const picture3X = useTransform(scrollYProgress, [0, 1], ['0%', '90%']);
+  const picture3X = useTransform(scrollYProgress, [0, 1], ['0%', '60%']);
   const picture3Rotate = useTransform(scrollYProgress, [0, 1], [0, 8]);
 
   return {
@@ -56,17 +56,17 @@ export function AboutSection() {
             <div className="grid grid-cols-3 justify-items-center">
               <motion.div style={{ x: picture1X, rotate: picture1Rotate, zIndex: 1 }} className="origin-center">
                   <div className="p-4 rounded-2xl border bg-card text-card-foreground shadow-lg">
-                    <Image src={cardImages[0].src} alt={cardImages[0].alt} width={300} height={374} className="w-full h-auto rounded-lg object-cover bg-muted" />
+                    <Image src={cardImages[0].src} alt={cardImages[0].alt} width={400} height={498} className="w-full h-auto rounded-lg object-cover bg-muted" />
                   </div>
               </motion.div>
               <motion.div style={{ scale, zIndex: 2 }} className="origin-center">
                   <div className="p-4 rounded-2xl border bg-card text-card-foreground shadow-lg">
-                    <Image src={cardImages[1].src} alt={cardImages[1].alt} width={300} height={374} className="w-full h-auto rounded-lg object-cover bg-muted" />
+                    <Image src={cardImages[1].src} alt={cardImages[1].alt} width={400} height={498} className="w-full h-auto rounded-lg object-cover bg-muted" />
                   </div>
               </motion.div>
               <motion.div style={{ x: picture3X, rotate: picture3Rotate, zIndex: 1 }} className="origin-center">
                   <div className="p-4 rounded-2xl border bg-card text-card-foreground shadow-lg">
-                    <Image src={cardImages[2].src} alt={cardImages[2].alt} width={300} height={374} className="w-full h-auto rounded-lg object-cover bg-muted" />
+                    <Image src={cardImages[2].src} alt={cardImages[2].alt} width={400} height={498} className="w-full h-auto rounded-lg object-cover bg-muted" />
                   </div>
               </motion.div>
             </div>
