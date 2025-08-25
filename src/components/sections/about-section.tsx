@@ -5,11 +5,12 @@ import Image from "next/image";
 import { useScroll, useTransform, motion, MotionValue } from 'framer-motion';
 import { useRef } from "react";
 import { useScrollProgress } from "@/hooks/use-scroll-progress";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const cardImages = [
-  { src: "https://placehold.co/600x400.png", alt: "Placeholder image 1", hint: "design collage" },
-  { src: "https://placehold.co/600x400.png", alt: "Placeholder image 2", hint: "modern workspace" },
-  { src: "https://placehold.co/600x400.png", alt: "Placeholder image 3", hint: "creative sketches" },
+  { src: "/img-1.png", alt: "Placeholder image 1", hint: "design collage" },
+  { src: "/img-2.png", alt: "Placeholder image 2", hint: "modern workspace" },
+  { src: "/img-3.png", alt: "Placeholder image 3", hint: "creative sketches" },
 ];
 
 function useCardAnimation(scrollYProgress: MotionValue<number>) {
@@ -29,6 +30,7 @@ function useCardAnimation(scrollYProgress: MotionValue<number>) {
 }
 
 export function AboutSection() {
+    const isMobile = useIsMobile();
     const containerRef = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScrollProgress(containerRef, {
       offset: ["start end", "end start"],
@@ -50,28 +52,38 @@ export function AboutSection() {
           Hi! 👋 I&apos;m Ayaz, A <span className="font-bold text-foreground">UI/UX Designer</span> With 4 Years Of Experience In Design. I&apos;ve worked with products in <span className="font-bold text-foreground">SaaS, Web3 & AI</span> 🌍 Building Clean And <span className="font-bold text-foreground">User-Friendly Interfaces</span> ✨.
         </p>
       </div>
-
-      <div className="mt-20 md:mt-24 h-[200vh]">
-          <div className="sticky top-1/4">
-            <div className="grid grid-cols-3 justify-items-center">
-              <motion.div style={{ x: picture1X, rotate: picture1Rotate, zIndex: 1 }} className="origin-center">
-                  <div className="p-4 rounded-2xl border bg-card text-card-foreground shadow-lg">
-                    <Image src={cardImages[0].src} alt={cardImages[0].alt} width={600} height={400} className="w-full h-auto rounded-lg object-cover bg-muted" data-ai-hint={cardImages[0].hint} />
-                  </div>
-              </motion.div>
-              <motion.div style={{ scale, zIndex: 2 }} className="origin-center">
-                  <div className="p-4 rounded-2xl border bg-card text-card-foreground shadow-lg">
-                    <Image src={cardImages[1].src} alt={cardImages[1].alt} width={600} height={400} className="w-full h-auto rounded-lg object-cover bg-muted" data-ai-hint={cardImages[1].hint} />
-                  </div>
-              </motion.div>
-              <motion.div style={{ x: picture3X, rotate: picture3Rotate, zIndex: 1 }} className="origin-center">
-                  <div className="p-4 rounded-2xl border bg-card text-card-foreground shadow-lg">
-                    <Image src={cardImages[2].src} alt={cardImages[2].alt} width={600} height={400} className="w-full h-auto rounded-lg object-cover bg-muted" data-ai-hint={cardImages[2].hint} />
-                  </div>
-              </motion.div>
+      
+      {isMobile ? (
+        <div className="mt-16 flex flex-col items-center gap-8">
+          {cardImages.map((card, index) => (
+            <div key={index} className="p-4 rounded-2xl border bg-card text-card-foreground shadow-lg">
+              <Image src={card.src} alt={card.alt} width={600} height={400} className="w-full h-auto rounded-lg object-cover bg-muted" data-ai-hint={card.hint} />
             </div>
-          </div>
-      </div>
+          ))}
+        </div>
+      ) : (
+        <div className="mt-20 md:mt-24 h-[200vh]">
+            <div className="sticky top-1/4">
+              <div className="grid grid-cols-3 justify-items-center">
+                <motion.div style={{ x: picture1X, rotate: picture1Rotate, zIndex: 1 }} className="origin-center">
+                    <div className="p-4 rounded-2xl border bg-card text-card-foreground shadow-lg">
+                      <Image src={cardImages[0].src} alt={cardImages[0].alt} width={600} height={400} className="w-full h-auto rounded-lg object-cover bg-muted" data-ai-hint={cardImages[0].hint} />
+                    </div>
+                </motion.div>
+                <motion.div style={{ scale, zIndex: 2 }} className="origin-center">
+                    <div className="p-4 rounded-2xl border bg-card text-card-foreground shadow-lg">
+                      <Image src={cardImages[1].src} alt={cardImages[1].alt} width={600} height={400} className="w-full h-auto rounded-lg object-cover bg-muted" data-ai-hint={cardImages[1].hint} />
+                    </div>
+                </motion.div>
+                <motion.div style={{ x: picture3X, rotate: picture3Rotate, zIndex: 1 }} className="origin-center">
+                    <div className="p-4 rounded-2xl border bg-card text-card-foreground shadow-lg">
+                      <Image src={cardImages[2].src} alt={cardImages[2].alt} width={600} height={400} className="w-full h-auto rounded-lg object-cover bg-muted" data-ai-hint={cardImages[2].hint} />
+                    </div>
+                </motion.div>
+              </div>
+            </div>
+        </div>
+      )}
     </section>
   );
 }
